@@ -33,10 +33,17 @@ section:nth-child(even){background:#fff}
 h2{font-size:clamp(1.5rem,4vw,2rem);font-weight:700;letter-spacing:-0.02em;margin-bottom:16px;color:#1a1a2e}
 h2 + .sub{color:#555;font-size:1.05rem;margin-bottom:32px;max-width:600px}
 
-/* core block — головне повідомлення */
+/* core block */
 .core-block{background:linear-gradient(135deg,#1a1a2e 0%,#0f3460 100%);color:#fff;border-radius:20px;padding:48px 40px;margin:0}
 .core-block p{font-size:clamp(1rem,2.5vw,1.2rem);line-height:1.7;color:rgba(255,255,255,0.9)}
 .core-block .hl{color:#ffd700;font-style:normal;font-weight:600}
+
+/* philosophy block — новий */
+.philosophy{background:#f8f5ee;border:1px solid #e8dfd0;border-radius:20px;padding:40px 36px}
+.philosophy h3{font-size:1.15rem;font-weight:700;color:#1a1a2e;margin-bottom:20px}
+.philosophy p{color:#444;font-size:0.97rem;line-height:1.7;margin-bottom:14px}
+.philosophy p:last-child{margin-bottom:0}
+.philosophy .em{color:#1a1a2e;font-weight:600}
 
 /* what you get */
 .result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin-top:8px}
@@ -58,12 +65,13 @@ h2 + .sub{color:#555;font-size:1.05rem;margin-bottom:32px;max-width:600px}
 .domains{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
 .domain-tag{background:#fff;border:1px solid #e0e0e0;border-radius:100px;padding:8px 18px;font-size:0.85rem;color:#444;font-weight:500;transition:all 0.2s}
 .domain-tag:hover{background:#ffd700;color:#1a1a2e;border-color:#ffd700}
-.domains-note{color:#888;font-size:0.9rem;margin-top:12px;font-style:italic}
 
-/* story block */
-.story-block{background:#fff8f0;border:1px solid #ffe4c4;border-radius:16px;padding:28px 32px;margin-top:8px}
+/* stories */
+.story-block{background:#fff8f0;border:1px solid #ffe4c4;border-radius:16px;padding:28px 32px}
+.story-block + .story-block{margin-top:16px}
 .story-block .story-label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:#d4873a;margin-bottom:8px}
 .story-block p{color:#444;font-size:0.95rem;line-height:1.7}
+.story-block strong{color:#1a1a2e}
 
 /* principles */
 .principles{display:grid;grid-template-columns:1fr;gap:16px;margin-top:8px}
@@ -108,9 +116,8 @@ footer a{color:#ffd700;text-decoration:none}
 @media(max-width:600px){
   .hero{padding:60px 0 40px}
   section{padding:48px 0}
-  .core-block{padding:32px 24px}
-  .about-block{padding:24px 20px}
-  .story-block{padding:24px 20px}
+  .core-block,.philosophy{padding:32px 24px}
+  .about-block,.story-block{padding:24px 20px}
   .hero-spots{flex-direction:column;gap:6px;padding:12px 20px}
   .format-grid{grid-template-columns:1fr}
   .principle{flex-direction:column;gap:12px}
@@ -131,7 +138,7 @@ footer a{color:#ffd700;text-decoration:none}
   <div class="container">
     <div class="hero-badge">Безкоштовно • Без віку</div>
     <h1>Дія <span>до</span> мрії</h1>
-    <div class="hero-tagline">Напарник для старту.<br>Людина, яка допомагає перетворити ідею на першу реальну дію.</div>
+    <div class="hero-tagline">Напарник для старту.<br>«Ходімо. Зараз перевіримо.»</div>
     <div class="hero-spots">
       <span>3</span>
       вільні місця для старту
@@ -157,14 +164,31 @@ footer a{color:#ffd700;text-decoration:none}
   <div class="container fade-in">
     <div class="section-label">Чому це важливо</div>
     <h2>Найважче — не зробити, а почати</h2>
-    <p class="sub">Буває: є мрія, є ідея. Але не знаєш, з чого почати. Або боїшся, що перший крок буде неправильним. Або відкладаєш на потім — і з часом перестаєш про це думати.</p>
+    <p class="sub">Буває: є мрія, є ідея. Але не знаєш, з чого почати. Або боїшся, що перша спроба буде невдалою. Або відкладаєш на потім — і з часом перестаєш про це думати.</p>
     <p>Я це знаю. Я сам через це проходив — багато разів, у різних сферах.</p>
     <p style="margin-top:12px">Майже кожного разу виявлялося, що реальність зовсім не така, як я уявляв. Одні ідеї, які здавалися чудовими, не працювали. Інші, від яких я нічого не очікував, навпаки — давали результат. Саме тому я перестав намагатися все прорахувати наперед і почав більше перевіряти на практиці.</p>
   </div>
 </section>
 
-<!-- WHAT YOU GET -->
+<!-- PHILOSOPHY / ЩО Я ВІРЮ -->
 <section style="background:#fff">
+  <div class="container fade-in">
+    <div class="section-label">Моє переконання</div>
+    <h2>У що я вірю</h2>
+
+    <div class="philosophy">
+      <p>Я не вірю, що життя можна ідеально спланувати.</p>
+      <p>Не вірю, що існує правильний момент для старту.</p>
+      <p>І майже ніколи не вірю в припущення, поки вони не перевірені.</p>
+      <p style="margin-top:20px" class="em">Я вірю в маленькі експерименти.</p>
+      <p class="em">У те, що одна дія часто дає більше розуміння, ніж десятки годин роздумів.</p>
+      <p style="margin-top:20px">Саме так я працюю зі своїми ідеями. І саме так допомагаю іншим.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section>
   <div class="container fade-in">
     <div class="section-label">Результат</div>
     <h2>Що ти отримаєш після першої зустрічі</h2>
@@ -192,15 +216,15 @@ footer a{color:#ffd700;text-decoration:none}
 </section>
 
 <!-- WHO I AM -->
-<section>
+<section style="background:#fff">
   <div class="container fade-in">
     <div class="section-label">Хто я</div>
     <h2>Людина, яка любить починати нові проєкти</h2>
-    <p class="sub">Я не претендую на роль універсального експерта. Я знаю достатньо, щоб допомогти тобі зробити перший крок.</p>
+    <p class="sub">Я не претендую на роль універсального експерта. Я знаю достатньо, щоб допомогти тобі зробити першу перевірку.</p>
 
     <div class="about-block">
       <p>За останні роки я багато разів починав нові справи в різних сферах. Майже щоразу процес був однаковим: виникала ідея — далі пошук інформації, перші невеликі експерименти, помилки й поступовий результат.</p>
-      <p>Саме це я і пропоную. Не готові відповіді на всі питання, а допомогу в тому, щоб зробити перші кроки без зайвого хаосу.</p>
+      <p>Саме це я і пропоную. Не готові відповіді на всі питання, а допомогу в тому, щоб зробити перші дії без зайвого хаосу.</p>
       <p>Якщо питання виходить за межі мого досвіду — я чесно скажу про це. Якщо його можна дослідити й перевірити на практиці — допоможу знайти шлях.</p>
     </div>
 
@@ -223,18 +247,18 @@ footer a{color:#ffd700;text-decoration:none}
 </section>
 
 <!-- STORIES -->
-<section style="background:#fff">
+<section>
   <div class="container fade-in">
     <div class="section-label">Як це виглядає на практиці</div>
     <h2>Короткі історії</h2>
     <p class="sub">Не вигадані кейси. Реальні ситуації, які показують, як працює підхід.</p>
 
-    <div class="story-block" style="margin-bottom:16px">
+    <div class="story-block">
       <div class="story-label">Історія перша — крок до бізнесу</div>
       <p>Ми з другом отримали повідомлення від організатора свят: потрібен клоун-ходуліст. Друг цим займався, а я навіть не знав, як ті ходулі виглядають.</p>
       <p style="margin-top:8px">Він спробував орендувати ходулі — не вийшло. Я спитав: «А як вони взагалі влаштовані?» Він розповів. І я сказав: <strong>«Давай самі зробимо.»</strong></p>
       <p style="margin-top:8px">У той момент його кут думки змінився. Він створив досить прибутковий бізнес, купив квартиру, машину, відпустки. А першим кроком до цього стали ті самі ходулі, зроблені власноруч за вечір.</p>
-      <p style="margin-top:8px">Мені ці знання теж згодились — згодом я заробив першу 1000 доларів за 2 тижні, використовуючи ті ж навички.</p>
+      <p style="margin-top:8px">Найважливішим були не самі ходулі. Найважливішим було те, що ми перестали шукати готове рішення і поставили собі питання: <strong>«А чи можемо зробити це самі?»</strong> Іноді саме така зміна способу мислення відкриває нові можливості.</p>
     </div>
 
     <div class="story-block">
@@ -242,31 +266,31 @@ footer a{color:#ffd700;text-decoration:none}
       <p>Інший друг довго відкладав створення своєї гри. Він планував, але не перевіряв на практиці.</p>
       <p style="margin-top:8px">Ми створили додаток за один вечір, щоб перевірити його уявлення. Він щиро вважав: якщо зробити квест із кладом, більшість захоче цей клад настільки, що обійде пів міста.</p>
       <p style="margin-top:8px">З 10 опитаних погодилась одна дівчина. Вона не прийшла в призначений час. І ми зрозуміли: уявлення не збігаються з реальністю — поки не перевіриш.</p>
-      <p style="margin-top:8px">Ми змінили підхід. І саме цей принцип я використовую досі: <strong>спочатку маленька дія, потім висновки.</strong></p>
+      <p style="margin-top:8px">Ми зрозуміли, що одна година перевірки може дати більше, ніж місяць роздумів. Відтоді я майже завжди починаю з <strong>маленького експерименту</strong>.</p>
     </div>
   </div>
 </section>
 
 <!-- PRINCIPLES -->
-<section>
+<section style="background:#fff">
   <div class="container fade-in">
     <div class="section-label">Як я працюю</div>
-    <h2>Напарник для старту</h2>
+    <h2>«Ходімо. Зараз перевіримо.»</h2>
     <p class="sub">Я поруч, а не зверху. Ми розбираємось разом.</p>
 
     <div class="principles">
       <div class="principle">
         <div class="principle-num">1</div>
         <div>
-          <h3>Мінімум інформації для першої дії</h3>
-          <p>Я даю рівно стільки, скільки потрібно, щоб зробити крок. Не більше. Жодної зайвої теорії.</p>
+          <h3>Мінімум для першої перевірки</h3>
+          <p>Я даю рівно стільки, скільки потрібно, щоб зробити маленький експеримент. Не більше. Жодної зайвої теорії.</p>
         </div>
       </div>
       <div class="principle">
         <div class="principle-num">2</div>
         <div>
           <h3>Перевірка ідеї на реальність</h3>
-          <p>Після першої дії ти або зрозумієш, що це справді твоє, або звільниш енергію для іншого. Обидва результати — цінні.</p>
+          <p>Після першої спроби ти або зрозумієш, що це справді твоє, або звільниш енергію для іншого. Обидва результати — цінні.</p>
         </div>
       </div>
       <div class="principle">
@@ -288,7 +312,7 @@ footer a{color:#ffd700;text-decoration:none}
 </section>
 
 <!-- FOR WHOM -->
-<section style="background:#fff">
+<section>
   <div class="container fade-in">
     <div class="section-label">Для кого</div>
     <h2>Без вікових обмежень</h2>
@@ -298,7 +322,7 @@ footer a{color:#ffd700;text-decoration:none}
       <div class="for-card">
         <div class="icon">🧒</div>
         <h3>Дитина з ідеєю</h3>
-        <p>Хоче створити гру, робота, мультик, сайт — але не знає з чого почати. Я допоможу зробити перший крок.</p>
+        <p>Хоче створити гру, робота, мультик, сайт — але не знає з чого почати. Я допоможу зробити перший маленький експеримент.</p>
       </div>
       <div class="for-card">
         <div class="icon">🧑‍💻</div>
@@ -315,7 +339,7 @@ footer a{color:#ffd700;text-decoration:none}
 </section>
 
 <!-- FORMAT -->
-<section>
+<section style="background:#fff">
   <div class="container fade-in">
     <div class="section-label">Формат</div>
     <h2>Як це працює</h2>
@@ -339,7 +363,7 @@ footer a{color:#ffd700;text-decoration:none}
 </section>
 
 <!-- FAQ -->
-<section style="background:#fff">
+<section>
   <div class="container fade-in">
     <div class="section-label">Питання</div>
     <h2>Що ще важливо знати</h2>
