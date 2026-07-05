@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Handlung zum Traum — «Komm. Jetzt prüfen wir es.»</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=JetBrains+Mono:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:#faf5eb;color:#353a43;line-height:1.8;-webkit-font-smoothing:antialiased;font-size:17px;font-weight:300}
+.container{max-width:720px;margin:0 auto;padding:0 32px}
+.mono{font-family:'JetBrains Mono',monospace;font-weight:300}
+.hero{min-height:90vh;display:flex;align-items:center;justify-content:center;background:#faf5eb;color:#25282d;padding:40px 0;text-align:center;position:relative}
+.hero h1{font-size:clamp(2.8rem,7vw,4.5rem);font-weight:200;letter-spacing:0.04em;line-height:1.1;margin-bottom:16px;color:#25282d}
+.hero h1 span{color:#5c6b7e}
+.hero-tagline{font-size:clamp(1.2rem,2.8vw,1.6rem);color:#5c6b7e;max-width:540px;margin:0 auto 12px;font-weight:300;letter-spacing:0.02em}
+.hero-sub{font-size:clamp(0.95rem,2vw,1.05rem);color:#8b8f99;max-width:460px;margin:0 auto 48px;font-weight:300;line-height:1.7}
+.hero-spots{display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid #e1e4e8;border-radius:40px;padding:8px 20px;font-size:13px;font-family:'JetBrains Mono',monospace;font-weight:300;color:#6e737d;margin-bottom:48px;letter-spacing:0.02em}
+.hero-spots span{font-weight:400;color:#25282d}
+.hero-cta{display:inline-flex;align-items:center;gap:10px;background:#3b82f6;color:#fff;padding:16px 36px;border-radius:40px;font-size:0.95rem;font-weight:400;text-decoration:none;letter-spacing:0.02em;transition:background 0.3s}
+.hero-cta:hover{background:#2563eb}
+.hero-cta svg{width:18px;height:18px;flex-shrink:0;stroke:#fff}
+.lang-switch{position:fixed;top:20px;right:20px;z-index:100;background:#fff;border:1px solid #e1e4e8;border-radius:40px;padding:6px 16px;font-size:13px;color:#5c6b7e;text-decoration:none;font-weight:300;transition:all 0.2s}
+.lang-switch:hover{border-color:#5c6b7e;color:#25282d}
+section{padding:96px 0}
+section:nth-child(even){background:#fff}
+.section-label{font-size:11px;font-family:'JetBrains Mono',monospace;font-weight:300;text-transform:uppercase;letter-spacing:0.08em;color:#8b8f99;margin-bottom:16px}
+h2{font-size:clamp(1.5rem,3.5vw,2rem);font-weight:300;letter-spacing:0.04em;margin-bottom:20px;color:#25282d;line-height:1.2}
+h2 + .sub{color:#6e737d;font-size:1rem;margin-bottom:40px;max-width:560px;line-height:1.7;font-weight:300}
+.core-block{background:#faf5eb;border:1px solid #e1e4e8;border-radius:24px;padding:56px 48px;margin:0}
+.core-block p{font-size:clamp(1rem,2.2vw,1.15rem);line-height:1.9;color:#353a43;font-weight:300}
+.core-block .hl{color:#25282d;font-weight:400}
+.content-block{background:#faf5eb;border:1px solid #e1e4e8;border-radius:24px;padding:52px 48px;margin-top:8px}
+.content-block p{color:#353a43;font-size:1rem;line-height:1.9;margin-bottom:16px;font-weight:300}
+.content-block p:last-child{margin-bottom:0}
+.content-block .big-q{font-size:1.15rem;font-weight:400;color:#25282d;margin:24px 0 12px;line-height:1.7;letter-spacing:0.02em}
+.philosophy{background:#faf5eb;border:1px solid #e1e4e8;border-radius:24px;padding:56px 48px;margin:0}
+.philosophy p{font-size:clamp(1rem,2vw,1.1rem);line-height:1.9;color:#353a43;font-weight:300;margin-bottom:14px}
+.philosophy .hl-phil{color:#25282d;font-weight:400}
+.philosophy p:last-child{margin-bottom:0}
+.result-grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:8px}
+.result-item{background:#faf5eb;border:1px solid #e1e4e8;border-radius:20px;padding:28px 32px;display:flex;gap:18px;align-items:flex-start}
+.result-check{flex-shrink:0;width:28px;height:28px;border:1px solid #d1d4d9;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;color:#5c6b7e;font-family:'JetBrains Mono',monospace;font-weight:300;margin-top:3px}
+.result-item p{color:#353a43;font-size:1rem;line-height:1.7;font-weight:300}
+.result-item strong{color:#25282d;font-weight:400}
+.story-block{background:#faf5eb;border:1px solid #e1e4e8;border-radius:20px;padding:40px 40px}
+.story-block .story-label{font-size:11px;font-family:'JetBrains Mono',monospace;font-weight:300;text-transform:uppercase;letter-spacing:0.08em;color:#8b8f99;margin-bottom:12px}
+.story-block p{color:#353a43;font-size:1rem;line-height:1.9;font-weight:300}
+.story-block strong{color:#25282d;font-weight:400}
+.about-wrap{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:start;margin-top:8px}
+.about-photo{width:100px;height:100px;border-radius:50%;object-fit:cover;border:1px solid #e1e4e8;flex-shrink:0}
+.about-block{background:#faf5eb;border:1px solid #e1e4e8;border-radius:20px;padding:36px}
+.about-block p{color:#353a43;font-size:1rem;margin-bottom:14px;line-height:1.9;font-weight:300}
+.about-block p:last-child{margin-bottom:0}
+.social-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.social-link{background:transparent;border:1px solid #e1e4e8;border-radius:40px;padding:8px 20px;font-size:0.85rem;color:#5c6b7e;text-decoration:none;font-weight:300;letter-spacing:0.02em;transition:border-color 0.2s,color 0.2s}
+.social-link:hover{border-color:#5c6b7e;color:#25282d}
+.strong-quote{background:#faf5eb;border-left:2px solid #c4a69d;border-radius:16px;padding:32px 36px;margin:24px 0 0;font-size:1rem;line-height:1.8;color:#353a43;font-weight:300}
+.domains{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.domain-tag{background:transparent;border:1px solid #e1e4e8;border-radius:40px;padding:8px 22px;font-size:0.85rem;color:#5c6b7e;font-weight:300;letter-spacing:0.02em;transition:border-color 0.2s,color 0.2s}
+.domain-tag:hover{border-color:#5c6b7e;color:#25282d}
+.principles{display:grid;grid-template-columns:1fr;gap:12px;margin-top:8px}
+.principle{background:#faf5eb;border:1px solid #e1e4e8;border-radius:20px;padding:24px 28px;display:flex;gap:18px;align-items:flex-start}
+.principle-num{flex-shrink:0;width:32px;height:32px;border:1px solid #d1d4d9;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:13px;color:#5c6b7e;font-weight:300;margin-top:2px}
+.principle p{color:#353a43;font-size:1rem;line-height:1.7;font-weight:300}
+.principle strong{color:#25282d;font-weight:400}
+.for-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:8px}
+.for-card{background:#faf5eb;border:1px solid #e1e4e8;border-radius:20px;padding:36px 28px;text-align:center}
+.for-card .icon{font-size:32px;margin-bottom:16px}
+.for-card h3{font-size:1rem;font-weight:400;margin-bottom:10px;color:#25282d;letter-spacing:0.02em}
+.for-card p{color:#6e737d;font-size:0.9rem;line-height:1.6;font-weight:300}
+.format-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#e1e4e8;border-radius:20px;overflow:hidden;margin-top:8px}
+.format-grid > div{padding:18px 24px;background:#fff}
+.format-grid .label{font-weight:300;color:#5c6b7e;font-size:0.85rem}
+.format-grid .value{color:#353a43;font-size:0.9rem;font-weight:300}
+.faq-item{border-bottom:1px solid #e1e4e8;padding:24px 0}
+.faq-item:last-child{border-bottom:none}
+.faq-q{font-weight:300;font-size:1rem;color:#25282d;margin-bottom:8px;cursor:pointer;letter-spacing:0.02em}
+.faq-a{color:#6e737d;font-size:0.95rem;line-height:1.8;font-weight:300}
+.cta-section{background:#faf5eb;border-top:1px solid #e1e4e8;color:#25282d;text-align:center;padding:100px 0}
+.cta-section h2{color:#25282d;font-size:clamp(1.5rem,3.5vw,2.2rem);font-weight:200;letter-spacing:0.04em}
+.cta-section p{color:#6e737d;max-width:520px;margin:0 auto 40px;font-size:1rem;line-height:1.8;font-weight:300}
+.cta-btn{display:inline-flex;align-items:center;gap:10px;background:#3b82f6;color:#fff;padding:16px 36px;border-radius:40px;font-size:0.95rem;font-weight:400;text-decoration:none;letter-spacing:0.02em;transition:background 0.3s}
+.cta-btn:hover{background:#2563eb}
+.cta-btn svg{width:18px;height:18px;flex-shrink:0;stroke:#fff}
+.cta-note{color:#8b8f99;font-size:0.85rem;margin-top:14px;font-weight:300}
+footer{background:#faf5eb;border-top:1px solid #e1e4e8;color:#8b8f99;text-align:center;padding:40px 0;font-size:0.85rem;font-weight:300}
+footer a{color:#5c6b7e;text-decoration:none}
+footer a:hover{color:#25282d}
+.fade-in{opacity:0;transform:translateY(20px);transition:opacity 0.8s ease,transform 0.8s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+@media(max-width:640px){
+  body{font-size:16px}
+  .hero{min-height:auto;padding:80px 0 60px}
+  .container{padding:0 24px}
+  section{padding:64px 0}
+  .core-block,.philosophy,.content-block,.about-block,.story-block{padding:28px 24px}
+  .about-wrap{grid-template-columns:1fr;justify-items:center;text-align:center}
+  .about-photo{width:80px;height:80px}
+  .principle{padding:20px}
+  .format-grid{grid-template-columns:1fr}
+  .result-item{padding:22px 24px}
+  .cta-section{padding:70px 0}
+  .hero h1{font-size:clamp(2rem,8vw,2.8rem)}
+  .lang-switch{top:14px;right:14px;font-size:12px;padding:4px 14px}
+}
+</style>
+</head>
+<body>
+
+<a href="index.html" class="lang-switch">UA 🇺🇦</a>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container">
+    <h1>Handlung <span>zum</span> Traum</h1>
+    <div class="hero-tagline">«Komm. Jetzt prüfen wir es.»</div>
+    <div class="hero-sub">Schieb es nicht auf morgen. Prüf deine Idee jetzt — mit einer kleinen Handlung.</div>
+    <div class="hero-spots">
+      <span>3</span>
+      Kontakte — so viele kann ich gleichzeitig begleiten
+    </div>
+    <a href="https://t.me/robosapiens8" class="hero-cta" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2.5L2.5 10.5L9.5 13.5"/><path d="M9.5 13.5L13.5 21.5L21.5 2.5"/><path d="M9.5 13.5L16.5 8.5"/></svg>
+      Auf Telegram schreiben
+    </a>
+  </div>
+</header>
+
+<!-- CORE -->
+<section>
+  <div class="container fade-in">
+    <div class="core-block">
+      <p>Die meisten Menschen schieben ihre Idee nicht aus Wissensmangel auf.<br>
+      Sie schieben sie auf, weil sie <span class="hl">nicht wissen, welcher erste Schritt der richtige ist.</span></p>
+      <p style="margin-top:24px"><span class="hl">Ich helfe, aufzuhören, nur zu denken</span> — und eine kleine Prüfung zu finden, die du genau jetzt machen kannst.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PASSIVITY -->
+<section style="background:#fff">
+  <div class="container fade-in">
+    <div class="section-label">Warum das wichtig ist</div>
+    <h2>Am schwersten ist der Übergang aus dem passiven Zustand</h2>
+
+    <div class="content-block">
+      <p>Selbst wenn jemand als Kind von etwas geträumt hat — <strong>von genau diesem Moment an kann er oder sie beginnen</strong>, sich in Richtung des Gewünschten zu bewegen. Mit dem Alter gewinnen wir nur noch mehr Fähigkeiten.</p>
+      <p>Das zu verstehen ist wichtig. Denn es ist unsere Verantwortung uns selbst gegenüber für das Leben, das wir leben werden.</p>
+      <div class="big-q">
+        Werden wir die Erfahrung machen, das Erträumte zu erreichen?<br>
+        Können wir darauf Einfluss nehmen?
+      </div>
+      <p style="font-size:1.05rem;font-weight:400;color:#25282d">Wenn ja — dann müssen wir es prüfen :)</p>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section>
+  <div class="container fade-in">
+    <div class="section-label">Meine Überzeugung</div>
+    <h2>Woran ich glaube</h2>
+
+    <div class="philosophy">
+      <p>Wir alle irren uns darüber, wie die Welt funktioniert. <span class="hl-phil">Der schnellste Weg, das herauszufinden — ist nicht länger nachzudenken, sondern zu prüfen.</span></p>
+      <p>Ich glaube nicht, dass man das Leben perfekt planen kann. Und ich glaube nicht, dass es den richtigen Moment für den Start gibt.</p>
+      <p><span class="hl-phil">Ich glaube an kleine Prüfungen.</span> Einfache Handlungen, die zeigen, ob unsere Vorstellungen stimmen oder nicht. Wenn ein Schritt funktioniert — gehen wir weiter. Wenn nicht — ist das kein Scheitern, sondern neue Erkenntnis: «Aha, hier habe ich mich geirrt. Versuchen wir es anders.»</p>
+      <p style="margin-top:24px">So arbeite ich mit meinen eigenen Ideen. Und so helfe ich anderen.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section style="background:#fff">
+  <div class="container fade-in">
+    <div class="section-label">Ergebnis</div>
+    <h2>Was du nach dem ersten Gespräch hast</h2>
+
+    <div class="result-grid">
+      <div class="result-item">
+        <div class="result-check">—</div>
+        <p><strong>Eine echte Prüfung,</strong> die du sofort oder direkt nach unserem Gespräch machen kannst.</p>
+      </div>
+      <div class="result-item">
+        <div class="result-check">—</div>
+        <p><strong>Klarheit darüber, wie deine Idee funktioniert</strong> — nach der ersten Prüfung siehst du, ob es sich lohnt weiterzumachen oder ob du die Richtung ändern solltest.</p>
+      </div>
+      <div class="result-item">
+        <div class="result-check">—</div>
+        <p><strong>Ein Mensch, dem du schreiben kannst,</strong> wenn du feststeckst. Ohne Formalitäten.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section>
+  <div class="container fade-in">
+    <div class="section-label">Wie das aussieht</div>
+    <h2>Eine kurze Geschichte</h2>
+    <p class="sub">Kein erfundener Fall. Eine reale Situation.</p>
+
+    <div class="story-block">
+      <div class="story-label">Schritt zum Geschäft</div>
+      <p>Ein Freund und ich bekamen einen Auftrag: ein Clown auf Stelzen wurde gebraucht. Er machte so etwas, ich wusste nicht einmal, wie Stelzen aussehen. Der Versuch, welche zu leihen — gescheitert. Ich fragte: «Wie sind sie überhaupt aufgebaut?» Er erklärte es. Und ich sagte: <strong>«Lass sie uns selbst machen.»</strong></p>
+      <p style="margin-top:14px">In diesem Moment veränderte sich sein Denken. Er baute ein profitables Geschäft auf, kaufte eine Wohnung, ein Auto. Und alles begann mit selbstgebauten Stelzen an einem Abend.</p>
+      <p style="margin-top:14px">Das Wichtigste war nicht, dass wir die Stelzen gebaut haben. Sondern dass wir aufhörten, nach einer fertigen Lösung zu suchen und fragten: <strong>«Können wir das selbst machen?»</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- WHO I AM -->
+<section style="background:#fff">
+  <div class="container fade-in">
+    <div class="section-label">Wer ich bin</div>
+    <h2>Taras Moskalenko — ein Mensch, der gerne neue Ideen prüft</h2>
+    <p class="sub">Das ist keine Beratung. Das ist eine gemeinsame Prüfung deiner Idee. Ich weiß genug, um zu helfen anzufangen. Wenn ich etwas nicht weiß — sage ich es ehrlich, und wir finden es gemeinsam heraus.</p>
+
+    <div class="about-wrap">
+      <img src="https://fil-m.github.io/portfolio-page/assets/photo.jpg" alt="Taras Moskalenko" class="about-photo" onerror="this.style.display='none'">
+      <div>
+        <div class="about-block">
+          <p>In den letzten Jahren habe ich immer wieder neue Projekte in verschiedenen Bereichen gestartet. Der Ablauf ist fast immer gleich: Idee → Recherche → kleines Experiment → Fehler → Ergebnis.</p>
+          <p>Genau das biete ich an. Keine fertigen Antworten, sondern <strong>Hilfe dabei, die erste Handlung in Richtung deines Traums zu machen.</strong></p>
+        </div>
+        <div class="social-links">
+          <a href="https://fil-m.github.io/portfolio-page/" class="social-link" target="_blank" rel="noopener">Portfolio</a>
+          <a href="https://github.com/Fil-m" class="social-link" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.instagram.com/moskalenko_taras/" class="social-link" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="strong-quote">
+      Ich habe keine Angst, «ich weiß es nicht» zu sagen. Aber ich weiß fast immer, wie man eine Antwort findet oder sie in der Praxis prüft.
+    </div>
+
+    <div class="section-label" style="margin-top:56px">Erfahrung</div>
+    <h2 style="font-size:1.2rem;font-weight:300;letter-spacing:0.04em">Projekte, die ich tatsächlich gestartet und zu Ende geführt habe</h2>
+
+    <div class="domains">
+      <span class="domain-tag">Produktion</span>
+      <span class="domain-tag">Medien & Video</span>
+      <span class="domain-tag">Web, Programmierung</span>
+      <span class="domain-tag">Robotik</span>
+      <span class="domain-tag">Bauwesen</span>
+      <span class="domain-tag">Technik & Mechanik</span>
+    </div>
+  </div>
+</section>
+
+<!-- PRINCIPLES -->
+<section>
+  <div class="container fade-in">
+    <div class="section-label">Wie ich arbeite</div>
+    <h2>An deiner Seite, nicht von oben</h2>
+    <p class="sub">Wir machen keine Pläne. Wir machen eine kleine Prüfung und sehen, ob wir die Welt richtig einschätzen.</p>
+
+    <div class="principles">
+      <div class="principle">
+        <div class="principle-num">01</div>
+        <p><strong>Minimum für die erste Prüfung.</strong> Genau so viel Information, wie für den Schritt nötig ist.</p>
+      </div>
+      <div class="principle">
+        <div class="principle-num">02</div>
+        <p><strong>Vorstellung ≠ Realität.</strong> Wir prüfen die Idee in der Praxis. Jedes Ergebnis ist neues Wissen.</p>
+      </div>
+      <div class="principle">
+        <div class="principle-num">03</div>
+        <p><strong>Ehrlichkeit.</strong> Wenn ich es nicht weiß — sage ich «ich weiß es nicht, aber lass es uns herausfinden».</p>
+      </div>
+      <div class="principle">
+        <div class="principle-num">04</div>
+        <p><strong>Ich mag es zu sehen,</strong> wie Menschen anfangen, das zu tun, woran sie lange gedacht haben.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOR WHOM -->
+<section style="background:#fff">
+  <div class="container fade-in">
+    <div class="section-label">Für wen</div>
+    <h2>Keine Altersbeschränkung</h2>
+    <p class="sub">8 oder 80 — spielt keine Rolle. Was zählt, ist die Idee, die du verwirklichen willst.</p>
+
+    <div class="for-grid">
+      <div class="for-card">
+        <div class="icon">🧒</div>
+        <h3>Kind mit einer Idee</h3>
+        <p>Möchte ein Spiel, einen Roboter, einen Trickfilm machen — weiß aber nicht, wo anfangen. Ich helfe beim ersten Experiment.</p>
+      </div>
+      <div class="for-card">
+        <div class="icon">🧑‍💻</div>
+        <h3>Erwachsener mit einem Traum</h3>
+        <p>Willst du schon lange dein eigenes Projekt starten, schiebst es aber auf? Lass es uns angehen — mit einer kleinen Handlung.</p>
+      </div>
+      <div class="for-card">
+        <div class="icon">👪</div>
+        <h3>Eltern</h3>
+        <p>Wenn Ihr Kind etwas erschaffen möchte — ich kann helfen. Für Minderjährige ist die <strong>Anwesenheit der Eltern</strong> beim ersten Gespräch <strong>verpflichtend</strong>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMAT -->
+<section>
+  <div class="container fade-in">
+    <div class="section-label">Format</div>
+    <h2>Wie es funktioniert</h2>
+
+    <div class="format-grid">
+      <div><span class="label">Preis</span></div>
+      <div><span class="value">Kostenlos</span></div>
+      <div><span class="label">Alter</span></div>
+      <div><span class="value">Keine Einschränkung. 8 oder 80.</span></div>
+      <div><span class="label">Thema</span></div>
+      <div><span class="value">Fast jedes, das man in kleinen Schritten prüfen kann.</span></div>
+      <div><span class="label">Format</span></div>
+      <div><span class="value">Online (Telegram, Anruf) oder vor Ort</span></div>
+      <div><span class="label">Start</span></div>
+      <div><span class="value">1–2 Gespräche + Unterstützung</span></div>
+      <div><span class="label">Kontakte</span></div>
+      <div><span class="value">3 gleichzeitig. Kontakte wechseln.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="background:#fff">
+  <div class="container fade-in">
+    <div class="section-label">Fragen</div>
+    <h2>Kurz zum Wichtigsten</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Warum kostenlos?</div>
+      <div class="faq-a">Ich mag es zu beobachten, wie ein Mensch vom «ich will» zum «ich mache» übergeht.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Und wenn ich keine Erfahrung habe?</div>
+      <div class="faq-a">Nur die Bereitschaft, es zu versuchen. Den Rest finden wir gemeinsam.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Ich bin ein Kind. Ist das für mich?</div>
+      <div class="faq-a">Ja. Aber die Eltern müssen Bescheid wissen und beim ersten Gespräch dabei sein.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Ist das eine Beratung? Mentoring?</div>
+      <div class="faq-a">Nein. Es ist eine gemeinsame Prüfung deiner Idee. Einfach «lass uns schauen, was wir jetzt machen können».</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Wie sind meine Daten geschützt?</div>
+      <div class="faq-a">Ich frage nicht nach persönlichen Daten, Finanzinformationen oder Passwörtern. Die gesamte Kommunikation läuft über Telegram oder persönlich.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Was, wenn ich keinen der 3 Plätze bekomme?</div>
+      <div class="faq-a">Schreib in einem Monat — die Kontakte wechseln, wenn Leute ihre Experimente abschließen.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container fade-in">
+    <div class="section-label" style="color:#8b8f99;letter-spacing:0.08em">Jetzt starten</div>
+    <h2>Hast du eine Idee?<br>«Komm. Jetzt prüfen wir es.»</h2>
+    <p>Schreib mir 2 Sätze: worum es bei deiner Idee geht und was dich davon abhält, anzufangen. Ich nehme nur drei Leute gleichzeitig. Die Kontakte wechseln, also kommen Plätze frei.</p>
+
+    <a href="https://t.me/robosapiens8" class="cta-btn" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2.5L2.5 10.5L9.5 13.5"/><path d="M9.5 13.5L13.5 21.5L21.5 2.5"/><path d="M9.5 13.5L16.5 8.5"/></svg>
+      Auf Telegram schreiben
+    </a>
+    <div class="cta-note">@robosapiens8 — schreib, keine Scheu</div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 Handlung zum Traum · Initiative von Taras Moskalenko</p>
+    <p style="margin-top:12px"><a href="https://t.me/robosapiens8" target="_blank" rel="noopener">Telegram</a> · <a href="https://fil-m.github.io/portfolio-page/" target="_blank" rel="noopener">Portfolio</a> · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
