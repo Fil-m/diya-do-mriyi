@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Дія до мрії — напарник для старту</title>
+<title>Дія до мрії — «Ходімо. Зараз перевіримо.»</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -13,7 +13,6 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:#faf9f6;c
 
 .container{max-width:720px;margin:0 auto;padding:0 24px}
 
-/* hero */
 .hero{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);color:#fff;padding:80px 0 60px;text-align:center;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(255,255,255,0.03) 0%,transparent 70%);pointer-events:none}
 .deco-circle{position:absolute;border-radius:50%;pointer-events:none;opacity:0.08}
@@ -22,182 +21,157 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:#faf9f6;c
 .hero-badge{display:inline-block;background:rgba(255,255,255,0.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.15);border-radius:100px;padding:8px 20px;font-size:14px;font-weight:600;color:#ffd700;letter-spacing:0.5px;margin-bottom:24px;text-transform:uppercase}
 .hero h1{font-size:clamp(2.5rem,7vw,4rem);font-weight:800;letter-spacing:-0.03em;line-height:1.1;margin-bottom:16px}
 .hero h1 span{background:linear-gradient(135deg,#ffd700,#ffb347);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero-tagline{font-size:clamp(1.1rem,2.5vw,1.25rem);color:rgba(255,255,255,0.85);max-width:520px;margin:0 auto 28px;font-weight:500}
+.hero-tagline{font-size:clamp(1.3rem,3vw,1.6rem);color:#ffd700;max-width:520px;margin:0 auto 20px;font-weight:700;letter-spacing:-0.02em;line-height:1.3}
+.hero-sub{font-size:clamp(1rem,2.2vw,1.15rem);color:rgba(255,255,255,0.7);max-width:460px;margin:0 auto 28px;font-weight:400}
 .hero-spots{display:inline-flex;align-items:center;gap:12px;background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.25);border-radius:100px;padding:12px 24px;font-size:15px;font-weight:600;color:#ffd700}
 .hero-spots span{background:#ffd700;color:#1a1a2e;border-radius:100px;padding:2px 12px;font-weight:800;font-size:18px}
 
-/* sections */
 section{padding:64px 0}
 section:nth-child(even){background:#fff}
 .section-label{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#ffb347;margin-bottom:8px}
 h2{font-size:clamp(1.5rem,4vw,2rem);font-weight:700;letter-spacing:-0.02em;margin-bottom:16px;color:#1a1a2e}
 h2 + .sub{color:#555;font-size:1.05rem;margin-bottom:32px;max-width:600px}
 
-/* core block */
 .core-block{background:linear-gradient(135deg,#1a1a2e 0%,#0f3460 100%);color:#fff;border-radius:20px;padding:48px 40px;margin:0}
 .core-block p{font-size:clamp(1rem,2.5vw,1.2rem);line-height:1.7;color:rgba(255,255,255,0.9)}
-.core-block .hl{color:#ffd700;font-style:normal;font-weight:600}
+.core-block .hl{color:#ffd700;font-weight:600}
 
-/* passive->active block — НОВИЙ */
-.passive-block{background:#f8f5ee;border:1px solid #e8dfd0;border-radius:20px;padding:40px 36px;margin-top:8px}
-.passive-block p{color:#444;font-size:0.97rem;line-height:1.7;margin-bottom:14px}
-.passive-block p:last-child{margin-bottom:0}
-.passive-block strong{color:#1a1a2e}
-.passive-block .question{font-size:1.05rem;font-weight:600;color:#1a1a2e;margin:18px 0 10px;line-height:1.6}
+.content-block{background:#f8f5ee;border:1px solid #e8dfd0;border-radius:20px;padding:40px 36px;margin-top:8px}
+.content-block p{color:#444;font-size:0.97rem;line-height:1.7;margin-bottom:14px}
+.content-block p:last-child{margin-bottom:0}
+.content-block strong{color:#1a1a2e}
+.content-block .big-q{font-size:1.1rem;font-weight:600;color:#1a1a2e;margin:16px 0 8px;line-height:1.6}
 
-/* philosophy block */
 .philosophy{background:#1a1a2e;color:#fff;border-radius:20px;padding:44px 40px;margin:0}
 .philosophy p{font-size:clamp(0.95rem,2vw,1.05rem);line-height:1.8;color:rgba(255,255,255,0.88);margin-bottom:12px}
 .philosophy .hl-phil{color:#ffd700;font-weight:600}
-.philosophy .strong-phil{font-weight:600;color:#fff}
+.philosophy .b{font-weight:600}
 .philosophy p:last-child{margin-bottom:0}
 
-/* what you get */
 .result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin-top:8px}
 .result-item{background:#f8f7f4;border:1px solid #eee;border-radius:16px;padding:24px;display:flex;gap:14px;align-items:flex-start}
 .result-check{flex-shrink:0;width:28px;height:28px;background:#ffd700;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;color:#1a1a2e;font-weight:700;margin-top:1px}
 .result-item p{color:#444;font-size:0.93rem;line-height:1.5}
 .result-item strong{color:#1a1a2e}
 
-/* who i am */
 .about-block{background:#f8f7f4;border:1px solid #eee;border-radius:20px;padding:36px;margin-top:8px}
 .about-block p{color:#444;font-size:0.95rem;margin-bottom:12px;line-height:1.7}
 .about-block p:last-child{margin-bottom:0}
 
-/* strong quote */
 .strong-quote{background:linear-gradient(135deg,#fef9ee,#fff8e7);border-left:4px solid #ffd700;border-radius:12px;padding:28px 32px;margin:24px 0 0;font-size:1.05rem;line-height:1.7;color:#333;font-weight:500}
 
-/* domains */
 .domains{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
-.domain-tag{background:#fff;border:1px solid #e0e0e0;border-radius:100px;padding:8px 18px;font-size:0.85rem;color:#444;font-weight:500;transition:all 0.2s}
+.domain-tag{background:#fff;border:1px solid #e0e0e0;border-radius:100px;padding:8px 18px;font-size:0.85rem;color:#444;font-weight:500}
 .domain-tag:hover{background:#ffd700;color:#1a1a2e;border-color:#ffd700}
 
-/* stories */
 .story-block{background:#fff8f0;border:1px solid #ffe4c4;border-radius:16px;padding:28px 32px}
-.story-block + .story-block{margin-top:16px}
 .story-block .story-label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:#d4873a;margin-bottom:8px}
 .story-block p{color:#444;font-size:0.95rem;line-height:1.7}
 .story-block strong{color:#1a1a2e}
 
-/* principles */
-.principles{display:grid;grid-template-columns:1fr;gap:16px;margin-top:8px}
-.principle{background:#f8f7f4;border:1px solid #eee;border-radius:16px;padding:24px;display:flex;gap:16px;align-items:flex-start}
-.principle-num{flex-shrink:0;width:40px;height:40px;background:linear-gradient(135deg,#ffd700,#ffb347);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;color:#1a1a2e}
-.principle h3{font-size:1rem;font-weight:600;margin-bottom:4px;color:#1a1a2e}
+.principles{display:grid;grid-template-columns:1fr;gap:12px;margin-top:8px}
+.principle{background:#f8f7f4;border:1px solid #eee;border-radius:16px;padding:20px 24px;display:flex;gap:14px;align-items:flex-start}
+.principle-num{flex-shrink:0;width:34px;height:34px;background:linear-gradient(135deg,#ffd700,#ffb347);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;color:#1a1a2e}
 .principle p{color:#555;font-size:0.92rem;line-height:1.5}
 
-/* for whom */
 .for-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:8px}
 .for-card{background:#f8f7f4;border:1px solid #eee;border-radius:16px;padding:28px 24px;text-align:center}
 .for-card .icon{font-size:36px;margin-bottom:12px}
 .for-card h3{font-size:1.1rem;font-weight:600;margin-bottom:8px}
 .for-card p{color:#555;font-size:0.9rem;line-height:1.5}
 
-/* format */
 .format-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#e5e5e5;border-radius:16px;overflow:hidden;margin-top:8px}
 .format-grid > div{padding:16px 20px;background:#fff}
 .format-grid .label{font-weight:600;color:#1a1a2e;font-size:0.9rem}
 .format-grid .value{color:#555;font-size:0.9rem}
 
-/* cta */
 .cta-section{background:linear-gradient(135deg,#1a1a2e 0%,#0f3460 100%);color:#fff;text-align:center;padding:80px 0}
 .cta-section h2{color:#fff}
 .cta-section p{color:rgba(255,255,255,0.75);max-width:500px;margin:0 auto 32px}
 .cta-btn{display:inline-flex;align-items:center;gap:10px;background:#ffd700;color:#1a1a2e;padding:16px 36px;border-radius:100px;font-size:1.1rem;font-weight:700;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s}
 .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(255,215,0,0.3)}
 .cta-btn svg{width:20px;height:20px}
-.cta-note{color:rgba(255,255,255,0.5);font-size:0.85rem;margin-top:16px}
+.cta-note{color:rgba(255,255,255,0.5);font-size:0.85rem;margin-top:12px;line-height:1.5}
 
-/* footer */
 footer{background:#0d0d1a;color:rgba(255,255,255,0.5);text-align:center;padding:32px 0;font-size:0.85rem}
 footer a{color:#ffd700;text-decoration:none}
 
-/* faq */
 .faq-item{border-bottom:1px solid #eee;padding:20px 0}
 .faq-item:last-child{border-bottom:none}
 .faq-q{font-weight:600;font-size:1rem;color:#1a1a2e;margin-bottom:6px;cursor:pointer}
 .faq-a{color:#555;font-size:0.93rem;line-height:1.6}
 
-/* responsive */
 @media(max-width:600px){
   .hero{padding:60px 0 40px}
   section{padding:48px 0}
-  .core-block,.philosophy,.passive-block{padding:32px 24px}
+  .core-block,.philosophy,.content-block{padding:32px 24px}
   .about-block,.story-block{padding:24px 20px}
   .hero-spots{flex-direction:column;gap:6px;padding:12px 20px}
   .format-grid{grid-template-columns:1fr}
-  .principle{flex-direction:column;gap:12px}
-  .strong-quote{padding:20px 24px}
+  .principle{padding:16px 20px}
 }
 
-/* animations */
 .fade-in{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease}
 .fade-in.visible{opacity:1;transform:translateY(0)}
 </style>
 </head>
 <body>
 
-<!-- HERO -->
 <header class="hero">
   <div class="deco-circle deco-1"></div>
   <div class="deco-circle deco-2"></div>
   <div class="container">
     <div class="hero-badge">Безкоштовно • Без віку</div>
     <h1>Дія <span>до</span> мрії</h1>
-    <div class="hero-tagline">Напарник для старту.<br>«Ходімо. Зараз перевіримо.»</div>
+    <div class="hero-tagline">«Ходімо. Зараз перевіримо.»</div>
+    <div class="hero-sub">Не будуємо плани. Знаходимо одну маленьку дію — і перевіряємо, чи вона веде туди, куди ми думаємо.</div>
     <div class="hero-spots">
       <span>3</span>
       вільні місця для старту
     </div>
   </div>
-</header>
+</section>
 
-<!-- CORE MESSAGE -->
+<!-- CORE -->
 <section style="background:#fff">
   <div class="container fade-in">
     <div class="core-block">
-      <p>Більшість людей не відкладають свою ідею через брак знань.<br>
-      Вони відкладають її, бо <span class="hl">не знають, який перший крок буде правильним</span>.</p>
-      <p style="margin-top:16px">Сьогодні проблема не в нестачі інформації. Її навіть забагато. Через це легко застрягнути між десятками порад, курсів і відео.</p>
-      <p style="margin-top:16px"><span class="hl">Найважче — зрозуміти, що саме зробити першим.</span><br>
-      Я допомагаю зробити цей крок.</p>
+      <p>Більшість людей не відкладають ідею через брак знань.<br>
+      Вони відкладають її, бо <span class="hl">не знають, який перший крок буде правильним.</span></p>
+      <p style="margin-top:16px"><span class="hl">Я допомагаю зробити цей крок.</span> Не планом на місяць — а однією маленькою перевіркою вже завтра.</p>
     </div>
   </div>
 </section>
 
-<!-- ПАСИВНІСТЬ + ВІДПОВІДАЛЬНІСТЬ — твій текст -->
+<!-- PASSIVITY + RESPONSIBILITY — скорочено -->
 <section>
   <div class="container fade-in">
     <div class="section-label">Чому це важливо</div>
-    <h2>Найважче — перейти з пасивного стану, коли думаєш про мрію</h2>
+    <h2>Найважче — перейти з пасивного стану</h2>
 
-    <div class="passive-block">
-      <p>Насправді, якщо людина навіть у дитинстві щось омріяла — <strong>то з того самого місця і моменту часу вона може почати рух</strong>, щоб отримати бажане. З віком ми лише набуваємо навичок — а отже, можемо ще більше.</p>
-
-      <p>Розуміння цього важливо. Бо це наша <strong>відповідальність перед собою</strong> за життя, яке ми проживемо.</p>
-
-      <div class="question">
+    <div class="content-block">
+      <p>Якщо людина навіть у дитинстві щось омріяла — <strong>то з того самого моменту вона може почати рух</strong>, щоб отримати бажане. З віком ми лише набуваємо навичок.</p>
+      <p>Розуміння цього важливо. Бо це наша відповідальність перед собою за життя, яке проживемо.</p>
+      <div class="big-q">
         Чи будемо ми мати досвід отримання омріяного?<br>
         Чи можемо ми на це впливати?
       </div>
-
       <p style="font-size:1.05rem;font-weight:600;color:#1a1a2e">Якщо так — то треба це перевірити :)</p>
     </div>
   </div>
 </section>
 
-<!-- ФІЛОСОФІЯ — твій текст повністю -->
+<!-- ФІЛОСОФІЯ — скорочено, прибрано повтори, замінено терміни -->
 <section style="background:#fff">
   <div class="container fade-in">
     <div class="section-label">Моє переконання</div>
     <h2>У що я вірю</h2>
 
     <div class="philosophy">
-      <p>Я не вірю, що життя можна ідеально спланувати.</p>
-      <p>Не вірю, що існує правильний момент для старту.</p>
-      <p>І <span class="hl-phil">що будь-які уявлення людей можуть бути помилковими</span> — і тільки практичні контрольовані експерименти показують вірність наших уявлень.</p>
-      <p style="margin-top:20px"><span class="hl-phil">Я вірю в маленькі експерименти.</span></p>
-      <p>Дії, що перевіряють, чи вірно ми уявляємо, як працює світ. <span class="strong-phil">Якщо крок вірний</span> — можна сміливо перевіряти наступний. <span class="strong-phil">Якщо ні</span> — це стимул для роздумів: а який зараз світ, що я його не так уявляв? — і до наступної перевірки вже з новими знаннями.</p>
+      <p>Я не вірю, що життя можна ідеально спланувати. Не вірю, що існує правильний момент для старту.</p>
+      <p><span class="hl-phil">Будь-які уявлення можуть бути помилковими</span> — і тільки практичні прості експерименти показують, чи вірно ми розуміємо світ.</p>
+      <p><span class="hl-phil">Я вірю в маленькі перевірки.</span></p>
+      <p>Якщо крок вірний — ідемо далі. <span class="b">Якщо ні</span> — це не провал, а нове знання: «Ага, цей шлях не той. Спробуємо інакше.»</p>
       <p style="margin-top:20px">Саме так я працюю зі своїми ідеями. І саме так допомагаю іншим.</p>
     </div>
   </div>
@@ -208,36 +182,50 @@ footer a{color:#ffd700;text-decoration:none}
   <div class="container fade-in">
     <div class="section-label">Результат</div>
     <h2>Що ти отримаєш після першої зустрічі</h2>
-    <p class="sub">Не обіцянки. Конкретні речі, які в тебе будуть після розмови.</p>
 
     <div class="result-grid">
       <div class="result-item">
         <div class="result-check">✓</div>
-        <p><strong>Одну реальну дію,</strong> яку можна зробити вже завтра, щоб перевірити свою ідею. Не план — а саме дія.</p>
+        <p><strong>Одну реальну дію,</strong> яку можна зробити вже завтра, щоб перевірити ідею.</p>
       </div>
       <div class="result-item">
         <div class="result-check">✓</div>
-        <p><strong>Розуміння, як перевірити ідею</strong> без великих витрат часу чи грошей — маленьким експериментом.</p>
+        <p><strong>Розуміння, як перевіряти ідеї</strong> без витрат часу і грошей — маленькими експериментами.</p>
       </div>
       <div class="result-item">
         <div class="result-check">✓</div>
-        <p><strong>Людина, якій можна написати,</strong> коли застрягнеш. Без формальностей. Просто поруч.</p>
+        <p><strong>Людина, якій можна написати,</strong> коли застрягнеш. Без формальностей.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ХТО Я — з твоєю правкою -->
+<!-- ІСТОРІЯ — одна, сильна -->
 <section style="background:#fff">
   <div class="container fade-in">
+    <div class="section-label">Як це виглядає</div>
+    <h2>Коротка історія</h2>
+    <p class="sub">Не вигаданий кейс. Реальна ситуація.</p>
+
+    <div class="story-block">
+      <div class="story-label">Крок до бізнесу</div>
+      <p>Ми з другом отримали замовлення: потрібен клоун-ходуліст. Він цим займався, я навіть не знав, як ті ходулі виглядають. Спроба орендувати — невдала. Я спитав: «А як вони влаштовані?» Він розповів. І я сказав: <strong>«Давай самі зробимо.»</strong></p>
+      <p style="margin-top:8px">У той момент його мислення змінилося. Він створив прибутковий бізнес, купив квартиру, машину. А почалося все з ходуль, зроблених за вечір.</p>
+      <p style="margin-top:8px">Найважливішим було не те, що ми зробили ходулі. А те, що ми перестали шукати готове рішення і запитали: <strong>«А чи можемо зробити самі?»</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ХТО Я — оновлена назва -->
+<section>
+  <div class="container fade-in">
     <div class="section-label">Хто я</div>
-    <h2>Людина, яка любить починати нові проєкти</h2>
-    <p class="sub">Я не претендую на роль універсального експерта. Я знаю достатньо, щоб допомогти зробити першу перевірку.</p>
+    <h2>Людина, яка любить перевіряти нові ідеї</h2>
+    <p class="sub">Я знаю достатньо, щоб допомогти з першою перевіркою. Якщо не знаю — чесно скажу, і ми розберемось разом.</p>
 
     <div class="about-block">
-      <p>За останні роки я багато разів починав нові справи в різних сферах. Майже щоразу процес був однаковим: виникала ідея — далі пошук інформації, перші невеликі експерименти, помилки й поступовий результат.</p>
-      <p>Саме це я і пропоную. Не готові відповіді на всі питання, а <strong>допомогу в тому, щоб зробити першу дію до мрії.</strong></p>
-      <p>Якщо питання виходить за межі мого досвіду — я чесно скажу про це. Якщо його можна дослідити й перевірити на практиці — допоможу знайти шлях.</p>
+      <p>За останні роки я багато разів починав нові справи в різних сферах. Процес майже завжди однаковий: ідея → пошук → маленький експеримент → помилки → результат.</p>
+      <p>Саме це я і пропоную. Не готові відповіді, а <strong>допомогу в тому, щоб зробити першу дію до мрії.</strong></p>
     </div>
 
     <div class="strong-quote">
@@ -245,11 +233,11 @@ footer a{color:#ffd700;text-decoration:none}
     </div>
 
     <div class="section-label" style="margin-top:40px">З чим я працював</div>
-    <h2 style="font-size:1.25rem">Це не список професій. Це проєкти, які я реально починав і доводив до результату.</h2>
+    <h2 style="font-size:1.2rem;font-weight:600">Проєкти, які я реально починав і доводив до результату</h2>
 
     <div class="domains">
-      <span class="domain-tag">⚙️ Виробництво простих пристроїв</span>
-      <span class="domain-tag">🎬 Медіа та відеовиробництво</span>
+      <span class="domain-tag">⚙️ Виробництво</span>
+      <span class="domain-tag">🎬 Медіа та відео</span>
       <span class="domain-tag">💻 Сайти, програмування, автоматизація</span>
       <span class="domain-tag">🤖 Робототехніка та електроніка</span>
       <span class="domain-tag">🏗️ Будівництво</span>
@@ -258,66 +246,29 @@ footer a{color:#ffd700;text-decoration:none}
   </div>
 </section>
 
-<!-- ІСТОРІЇ -->
-<section>
-  <div class="container fade-in">
-    <div class="section-label">Як це виглядає на практиці</div>
-    <h2>Короткі історії</h2>
-    <p class="sub">Не вигадані кейси. Реальні ситуації, які показують, як працює підхід.</p>
-
-    <div class="story-block">
-      <div class="story-label">Історія перша — крок до бізнесу</div>
-      <p>Ми з другом отримали повідомлення від організатора свят: потрібен клоун-ходуліст. Друг цим займався, а я навіть не знав, як ті ходулі виглядають.</p>
-      <p style="margin-top:8px">Він спробував орендувати ходулі — не вийшло. Я спитав: «А як вони взагалі влаштовані?» Він розповів. І я сказав: <strong>«Давай самі зробимо.»</strong></p>
-      <p style="margin-top:8px">У той момент його кут думки змінився. Він створив досить прибутковий бізнес, купив квартиру, машину, відпустки. А першим кроком до цього стали ті самі ходулі, зроблені власноруч за вечір.</p>
-      <p style="margin-top:8px">Найважливішим були не самі ходулі. Найважливішим було те, що ми перестали шукати готове рішення і поставили собі питання: <strong>«А чи можемо зробити це самі?»</strong> Іноді саме така зміна способу мислення відкриває нові можливості.</p>
-    </div>
-
-    <div class="story-block">
-      <div class="story-label">Історія друга — перевірка замість планування</div>
-      <p>Інший друг довго відкладав створення своєї гри. Він планував, але не перевіряв на практиці.</p>
-      <p style="margin-top:8px">Ми створили додаток за один вечір, щоб перевірити його уявлення. Він щиро вважав: якщо зробити квест із кладом, більшість захоче цей клад настільки, що обійде пів міста.</p>
-      <p style="margin-top:8px">З 10 опитаних погодилась одна дівчина. Вона не прийшла в призначений час. І ми зрозуміли: уявлення не збігаються з реальністю — поки не перевіриш.</p>
-      <p style="margin-top:8px">Ми зрозуміли, що одна година перевірки може дати більше, ніж місяць роздумів. Відтоді я майже завжди починаю з <strong>маленького експерименту</strong>.</p>
-    </div>
-  </div>
-</section>
-
 <!-- ПРИНЦИПИ -->
 <section style="background:#fff">
   <div class="container fade-in">
     <div class="section-label">Як я працюю</div>
-    <h2>«Ходімо. Зараз перевіримо.»</h2>
-    <p class="sub">Я поруч, а не зверху. Ми розбираємось разом.</p>
+    <h2>Поруч, а не зверху</h2>
+    <p class="sub">Ми не будуємо плани. Ми робимо одну маленьку перевірку і дивимось, що вийде.</p>
 
     <div class="principles">
       <div class="principle">
         <div class="principle-num">1</div>
-        <div>
-          <h3>Мінімум для першої перевірки</h3>
-          <p>Я даю рівно стільки, скільки потрібно, щоб зробити маленький експеримент. Не більше. Жодної зайвої теорії.</p>
-        </div>
+        <p><strong>Мінімум для першої перевірки.</strong> Рівно стільки інформації, скільки потрібно для кроку. Нічого зайвого.</p>
       </div>
       <div class="principle">
         <div class="principle-num">2</div>
-        <div>
-          <h3>Перевірка уявлень на реальність</h3>
-          <p>Після першої дії ти або зрозумієш, що це справді твоє, або дізнаєшся щось нове про світ і про себе. Обидва результати — цінні.</p>
-        </div>
+        <p><strong>Уявлення ≠ реальність.</strong> Перевіряємо ідею на практиці. Будь-який результат — це нове знання.</p>
       </div>
       <div class="principle">
         <div class="principle-num">3</div>
-        <div>
-          <h3>Чесність замість експертизи</h3>
-          <p>Якщо я не знаю — скажу «не знаю, але давай розберемось». Довіра важливіша за імідж.</p>
-        </div>
+        <p><strong>Чесність.</strong> Якщо не знаю — скажу «не знаю, але давай розберемось».</p>
       </div>
       <div class="principle">
         <div class="principle-num">4</div>
-        <div>
-          <h3>Мені подобається бачити,</h3>
-          <p>як люди починають робити те, про що давно думали. Це те, заради чого я це роблю.</p>
-        </div>
+        <p><strong>Мені подобається бачити,</strong> як люди починають робити те, про що давно думали. Це те, заради чого я це роблю.</p>
       </div>
     </div>
   </div>
@@ -328,23 +279,23 @@ footer a{color:#ffd700;text-decoration:none}
   <div class="container fade-in">
     <div class="section-label">Для кого</div>
     <h2>Без вікових обмежень</h2>
-    <p class="sub">8 років чи 80 — не має значення. Має значення ідея, яку хочеться втілити.</p>
+    <p class="sub">8 чи 80 — не має значення. Має значення ідея, яку хочеться втілити.</p>
 
     <div class="for-grid">
       <div class="for-card">
         <div class="icon">🧒</div>
         <h3>Дитина з ідеєю</h3>
-        <p>Хоче створити гру, робота, мультик, сайт — але не знає з чого почати. Я допоможу зробити перший маленький експеримент.</p>
+        <p>Хоче створити гру, робота, мультик — але не знає з чого почати. Допоможу зробити перший експеримент.</p>
       </div>
       <div class="for-card">
         <div class="icon">🧑‍💻</div>
         <h3>Дорослий із мрією</h3>
-        <p>Давно хочеш запустити свій проєкт, але відкладаєш? Розберемось разом — без тиску і без зайвої теорії, з однієї маленької дії.</p>
+        <p>Давно хочеш запустити свій проєкт, але відкладаєш? Розберемось — з однієї маленької дії.</p>
       </div>
       <div class="for-card">
         <div class="icon">👪</div>
         <h3>Батьки</h3>
-        <p>Якщо ваша дитина хоче щось створити — я можу допомогти. Для неповнолітніх бажано, щоб ви знали про спілкування або були присутні на першій зустрічі.</p>
+        <p>Якщо ваша дитина хоче щось створити — я можу допомогти. Для неповнолітніх бажана присутність на першій зустрічі.</p>
       </div>
     </div>
   </div>
@@ -355,21 +306,20 @@ footer a{color:#ffd700;text-decoration:none}
   <div class="container fade-in">
     <div class="section-label">Формат</div>
     <h2>Як це працює</h2>
-    <p class="sub">Ніяких підписок, контрактів, зобов'язань. Просто спробуй.</p>
 
     <div class="format-grid">
       <div><span class="label">Вартість</span></div>
       <div><span class="value">Безкоштовно</span></div>
-      <div><span class="label">Для кого</span></div>
-      <div><span class="value">Без вікових обмежень. 8 чи 80 — не має значення.</span></div>
+      <div><span class="label">Вік</span></div>
+      <div><span class="value">Без обмежень. 8 чи 80.</span></div>
       <div><span class="label">Тема</span></div>
-      <div><span class="value">Майже будь-яка, яку можна дослідити й перевірити невеликими практичними кроками. Якщо це не моя сфера — я чесно скажу про це.</span></div>
+      <div><span class="value">Майже будь-яка, яку можна перевірити невеликими кроками.</span></div>
       <div><span class="label">Формат</span></div>
       <div><span class="value">Онлайн (Telegram, дзвінок) або офлайн</span></div>
-      <div><span class="label">Тривалість</span></div>
-      <div><span class="value">1–2 зустрічі для старту + підтримка</span></div>
+      <div><span class="label">Старт</span></div>
+      <div><span class="value">1–2 зустрічі + підтримка</span></div>
       <div><span class="label">Місць</span></div>
-      <div><span class="value">Всього 3</span></div>
+      <div><span class="value">Всього 3 — щоб кожному приділити увагу</span></div>
     </div>
   </div>
 </section>
@@ -378,27 +328,23 @@ footer a{color:#ffd700;text-decoration:none}
 <section>
   <div class="container fade-in">
     <div class="section-label">Питання</div>
-    <h2>Що ще важливо знати</h2>
+    <h2>Коротко про головне</h2>
 
     <div class="faq-item">
       <div class="faq-q">Чому безкоштовно?</div>
-      <div class="faq-a">Бо я люблю допомагати людям переходити від мрії до дії. Мені цікаво спостерігати цей процес, і я хочу зробити його доступним для тих, хто справді хоче — але не знає як.</div>
+      <div class="faq-a">Мені подобається спостерігати, як людина переходить від «хочу» до «роблю». Це те, що я люблю.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">А якщо в мене немає досвіду?</div>
-      <div class="faq-a">Чудово. Саме для цього я тут. Ти не потребуєш досвіду — тільки бажання спробувати.</div>
+      <div class="faq-a">Чудово. Саме для цього я тут. Тільки бажання спробувати.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">Я дитина. Це для мене?</div>
-      <div class="faq-a">Так. Але бажано, щоб батьки знали про спілкування. Якщо хочеш — можу спочатку поговорити з ними.</div>
+      <div class="faq-a">Так. Але бажано, щоб батьки знали.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q">А якщо я не потраплю в 3 місця?</div>
-      <div class="faq-a">Напиши через місяць. Місця з'являтимуться. Або просто напиши — і я підкажу, з чого почати самостійно.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Це менторство? Коучинг? Консультації?</div>
-      <div class="faq-a">Ні. Це «давай розберемось разом, з чого почати». Без ярликів і без рамок.</div>
+      <div class="faq-q">Якщо не потраплю в 3 місця?</div>
+      <div class="faq-a">Напиши через місяць — місця з'являтимуться. Або просто напиши, підкажу з чого почати самостійно.</div>
     </div>
   </div>
 </section>
@@ -408,7 +354,7 @@ footer a{color:#ffd700;text-decoration:none}
   <div class="container fade-in">
     <div class="section-label" style="color:rgba(255,255,255,0.4)">Почни зараз</div>
     <h2>Готовий зробити перший крок?</h2>
-    <p>Напиши мені 2 речення: твоя ідея і що заважає почати. Я оберу 3 людей, з якими відчую, що можу бути максимально корисним.</p>
+    <p>Напиши мені 2 речення: твоя ідея і що заважає почати. Я беру лише трьох одночасно, щоб кожному приділити достатньо уваги.</p>
 
     <a href="https://t.me/robosapiens8" class="cta-btn" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2.5L2.5 10.5L9.5 13.5"/><path d="M9.5 13.5L13.5 21.5L21.5 2.5"/><path d="M9.5 13.5L16.5 8.5"/></svg>
@@ -418,11 +364,10 @@ footer a{color:#ffd700;text-decoration:none}
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="container">
     <p>© 2026 Дія до мрії. Безкоштовна ініціатива.</p>
-    <p style="margin-top:8px">Зв'язок: <a href="https://t.me/robosapiens8" target="_blank" rel="noopener">@robosapiens8 у Telegram</a></p>
+    <p style="margin-top:8px"><a href="https://t.me/robosapiens8" target="_blank" rel="noopener">@robosapiens8 у Telegram</a></p>
   </div>
 </footer>
 
