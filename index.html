@@ -5,123 +5,148 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Дія до мрії — «Ходімо. Зараз перевіримо.»</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:#faf9f6;color:#1a1a2e;line-height:1.6;-webkit-font-smoothing:antialiased}
+body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:#faf9f6;color:#1a1a2e;line-height:1.7;-webkit-font-smoothing:antialiased;font-size:18px}
 
-.container{max-width:720px;margin:0 auto;padding:0 24px}
+.container{max-width:740px;margin:0 auto;padding:0 28px}
 
-.hero{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);color:#fff;padding:80px 0 60px;text-align:center;position:relative;overflow:hidden}
+/* HERO — більше повітря, чіткіша ієрархія */
+.hero{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);color:#fff;padding:100px 0 80px;text-align:center;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(255,255,255,0.03) 0%,transparent 70%);pointer-events:none}
-.deco-circle{position:absolute;border-radius:50%;pointer-events:none;opacity:0.08}
-.deco-1{width:300px;height:300px;background:#ffd700;top:-100px;right:-100px}
-.deco-2{width:200px;height:200px;background:#ffb347;bottom:-60px;left:-60px}
-.hero-badge{display:inline-block;background:rgba(255,255,255,0.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.15);border-radius:100px;padding:8px 20px;font-size:14px;font-weight:600;color:#ffd700;letter-spacing:0.5px;margin-bottom:24px;text-transform:uppercase}
-.hero h1{font-size:clamp(2.5rem,7vw,4rem);font-weight:800;letter-spacing:-0.03em;line-height:1.1;margin-bottom:16px}
+.hero h1{font-size:clamp(3rem,8vw,4.8rem);font-weight:900;letter-spacing:-0.04em;line-height:1.05;margin-bottom:12px}
 .hero h1 span{background:linear-gradient(135deg,#ffd700,#ffb347);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero-tagline{font-size:clamp(1.3rem,3vw,1.6rem);color:#ffd700;max-width:520px;margin:0 auto 20px;font-weight:700;letter-spacing:-0.02em;line-height:1.3}
-.hero-sub{font-size:clamp(1rem,2.2vw,1.15rem);color:rgba(255,255,255,0.7);max-width:460px;margin:0 auto 28px;font-weight:400}
-.hero-spots{display:inline-flex;align-items:center;gap:12px;background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.25);border-radius:100px;padding:12px 24px;font-size:15px;font-weight:600;color:#ffd700}
-.hero-spots span{background:#ffd700;color:#1a1a2e;border-radius:100px;padding:2px 12px;font-weight:800;font-size:18px}
+.hero-tagline{font-size:clamp(1.4rem,3.2vw,1.8rem);color:#ffd700;max-width:560px;margin:0 auto 12px;font-weight:700;letter-spacing:-0.02em}
+.hero-sub{font-size:clamp(1.05rem,2.2vw,1.2rem);color:rgba(255,255,255,0.7);max-width:500px;margin:0 auto 36px;font-weight:400;line-height:1.6}
+.hero-spots{display:inline-flex;align-items:center;gap:10px;background:rgba(255,215,0,0.12);border:1px solid rgba(255,215,0,0.2);border-radius:60px;padding:10px 22px;font-size:15px;font-weight:500;color:rgba(255,215,0,0.9);margin-bottom:36px}
+.hero-spots span{background:#ffd700;color:#1a1a2e;border-radius:60px;padding:1px 10px;font-weight:800;font-size:17px}
 
-section{padding:64px 0}
+/* CTA в герої */
+.hero-cta{display:inline-flex;align-items:center;gap:10px;background:#ffd700;color:#1a1a2e;padding:18px 40px;border-radius:60px;font-size:1.1rem;font-weight:700;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s}
+.hero-cta:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(255,215,0,0.25)}
+.hero-cta svg{width:20px;height:20px;flex-shrink:0}
+
+/* секції */
+section{padding:80px 0}
 section:nth-child(even){background:#fff}
-.section-label{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#ffb347;margin-bottom:8px}
-h2{font-size:clamp(1.5rem,4vw,2rem);font-weight:700;letter-spacing:-0.02em;margin-bottom:16px;color:#1a1a2e}
-h2 + .sub{color:#555;font-size:1.05rem;margin-bottom:32px;max-width:600px}
+.section-label{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2.5px;color:#b8860b;margin-bottom:12px}
+h2{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:800;letter-spacing:-0.03em;margin-bottom:20px;color:#1a1a2e;line-height:1.2}
+h2 + .sub{color:#555;font-size:1.05rem;margin-bottom:36px;max-width:600px;line-height:1.6}
 
-.core-block{background:linear-gradient(135deg,#1a1a2e 0%,#0f3460 100%);color:#fff;border-radius:20px;padding:48px 40px;margin:0}
-.core-block p{font-size:clamp(1rem,2.5vw,1.2rem);line-height:1.7;color:rgba(255,255,255,0.9)}
-.core-block .hl{color:#ffd700;font-weight:600}
+/* core block */
+.core-block{background:linear-gradient(135deg,#1a1a2e 0%,#0f3460 100%);border-radius:24px;padding:56px 48px;margin:0}
+.core-block p{font-size:clamp(1.05rem,2.5vw,1.25rem);line-height:1.8;color:rgba(255,255,255,0.9)}
+.core-block .hl{color:#ffd700;font-weight:700}
 
-.content-block{background:#f8f5ee;border:1px solid #e8dfd0;border-radius:20px;padding:40px 36px;margin-top:8px}
-.content-block p{color:#444;font-size:0.97rem;line-height:1.7;margin-bottom:14px}
+/* passive block */
+.content-block{background:#f6f4ef;border:1px solid #e4dbcd;border-radius:24px;padding:48px 44px;margin-top:8px}
+.content-block p{color:#444;font-size:1.05rem;line-height:1.8;margin-bottom:16px}
 .content-block p:last-child{margin-bottom:0}
 .content-block strong{color:#1a1a2e}
-.content-block .big-q{font-size:1.1rem;font-weight:600;color:#1a1a2e;margin:16px 0 8px;line-height:1.6}
+.content-block .big-q{font-size:1.2rem;font-weight:700;color:#1a1a2e;margin:20px 0 12px;line-height:1.6}
 
-.philosophy{background:#1a1a2e;color:#fff;border-radius:20px;padding:44px 40px;margin:0}
-.philosophy p{font-size:clamp(0.95rem,2vw,1.05rem);line-height:1.8;color:rgba(255,255,255,0.88);margin-bottom:12px}
-.philosophy .hl-phil{color:#ffd700;font-weight:600}
-.philosophy .b{font-weight:600}
+/* philosophy */
+.philosophy{background:#1a1a2e;color:#fff;border-radius:24px;padding:52px 48px;margin:0}
+.philosophy p{font-size:clamp(1rem,2vw,1.1rem);line-height:1.9;color:rgba(255,255,255,0.88);margin-bottom:14px}
+.philosophy .hl-phil{color:#ffd700;font-weight:700}
 .philosophy p:last-child{margin-bottom:0}
 
-.result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin-top:8px}
-.result-item{background:#f8f7f4;border:1px solid #eee;border-radius:16px;padding:24px;display:flex;gap:14px;align-items:flex-start}
-.result-check{flex-shrink:0;width:28px;height:28px;background:#ffd700;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;color:#1a1a2e;font-weight:700;margin-top:1px}
-.result-item p{color:#444;font-size:0.93rem;line-height:1.5}
-.result-item strong{color:#1a1a2e}
+/* result grid */
+.result-grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:8px}
+.result-item{background:#f6f4ef;border:1px solid #eee;border-radius:20px;padding:28px 32px;display:flex;gap:18px;align-items:flex-start}
+.result-check{flex-shrink:0;width:32px;height:32px;background:#ffd700;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;color:#1a1a2e;font-weight:700;margin-top:2px}
+.result-item p{color:#444;font-size:1.05rem;line-height:1.6}
+.result-item strong{color:#1a1a2e;font-weight:700}
 
-.about-block{background:#f8f7f4;border:1px solid #eee;border-radius:20px;padding:36px;margin-top:8px}
-.about-block p{color:#444;font-size:0.95rem;margin-bottom:12px;line-height:1.7}
-.about-block p:last-child{margin-bottom:0}
-
-.strong-quote{background:linear-gradient(135deg,#fef9ee,#fff8e7);border-left:4px solid #ffd700;border-radius:12px;padding:28px 32px;margin:24px 0 0;font-size:1.05rem;line-height:1.7;color:#333;font-weight:500}
-
-.domains{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
-.domain-tag{background:#fff;border:1px solid #e0e0e0;border-radius:100px;padding:8px 18px;font-size:0.85rem;color:#444;font-weight:500}
-.domain-tag:hover{background:#ffd700;color:#1a1a2e;border-color:#ffd700}
-
-.story-block{background:#fff8f0;border:1px solid #ffe4c4;border-radius:16px;padding:28px 32px}
-.story-block .story-label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:#d4873a;margin-bottom:8px}
-.story-block p{color:#444;font-size:0.95rem;line-height:1.7}
+/* story */
+.story-block{background:#fff6ed;border:1px solid #f0dac6;border-radius:20px;padding:36px 36px}
+.story-block .story-label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:#c47830;margin-bottom:10px}
+.story-block p{color:#444;font-size:1.05rem;line-height:1.8}
 .story-block strong{color:#1a1a2e}
 
+/* who i am */
+.about-wrap{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:start;margin-top:8px}
+.about-photo{width:120px;height:120px;border-radius:50%;object-fit:cover;border:3px solid #ffd700;flex-shrink:0}
+.about-block{background:#f6f4ef;border:1px solid #eee;border-radius:20px;padding:36px}
+.about-block p{color:#444;font-size:1.05rem;margin-bottom:14px;line-height:1.8}
+.about-block p:last-child{margin-bottom:0}
+.social-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.social-link{background:#fff;border:1px solid #ddd;border-radius:60px;padding:8px 20px;font-size:0.9rem;color:#444;text-decoration:none;font-weight:500;transition:all 0.2s}
+.social-link:hover{background:#ffd700;color:#1a1a2e;border-color:#ffd700}
+
+.strong-quote{background:linear-gradient(135deg,#fef9ee,#fff6e5);border-left:4px solid #ffd700;border-radius:16px;padding:32px 36px;margin:24px 0 0;font-size:1.1rem;line-height:1.8;color:#333;font-weight:500}
+
+.domains{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.domain-tag{background:#fff;border:1px solid #ddd;border-radius:60px;padding:10px 22px;font-size:0.95rem;color:#444;font-weight:500;transition:all 0.2s}
+.domain-tag:hover{background:#ffd700;color:#1a1a2e;border-color:#ffd700}
+
+/* principles */
 .principles{display:grid;grid-template-columns:1fr;gap:12px;margin-top:8px}
-.principle{background:#f8f7f4;border:1px solid #eee;border-radius:16px;padding:20px 24px;display:flex;gap:14px;align-items:flex-start}
-.principle-num{flex-shrink:0;width:34px;height:34px;background:linear-gradient(135deg,#ffd700,#ffb347);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;color:#1a1a2e}
-.principle p{color:#555;font-size:0.92rem;line-height:1.5}
+.principle{background:#f6f4ef;border:1px solid #eee;border-radius:20px;padding:24px 28px;display:flex;gap:16px;align-items:flex-start}
+.principle-num{flex-shrink:0;width:36px;height:36px;background:linear-gradient(135deg,#ffd700,#ffb347);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;color:#1a1a2e;margin-top:2px}
+.principle p{color:#444;font-size:1.05rem;line-height:1.6}
+.principle strong{color:#1a1a2e}
 
-.for-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:8px}
-.for-card{background:#f8f7f4;border:1px solid #eee;border-radius:16px;padding:28px 24px;text-align:center}
-.for-card .icon{font-size:36px;margin-bottom:12px}
-.for-card h3{font-size:1.1rem;font-weight:600;margin-bottom:8px}
-.for-card p{color:#555;font-size:0.9rem;line-height:1.5}
+/* for whom */
+.for-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:8px}
+.for-card{background:#f6f4ef;border:1px solid #eee;border-radius:20px;padding:32px 24px;text-align:center}
+.for-card .icon{font-size:40px;margin-bottom:14px}
+.for-card h3{font-size:1.15rem;font-weight:700;margin-bottom:10px;color:#1a1a2e}
+.for-card p{color:#555;font-size:0.95rem;line-height:1.6}
 
-.format-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#e5e5e5;border-radius:16px;overflow:hidden;margin-top:8px}
-.format-grid > div{padding:16px 20px;background:#fff}
-.format-grid .label{font-weight:600;color:#1a1a2e;font-size:0.9rem}
-.format-grid .value{color:#555;font-size:0.9rem}
+/* format */
+.format-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#ddd;border-radius:20px;overflow:hidden;margin-top:8px}
+.format-grid > div{padding:18px 24px;background:#fff}
+.format-grid .label{font-weight:700;color:#1a1a2e;font-size:0.95rem}
+.format-grid .value{color:#555;font-size:0.95rem}
 
-.cta-section{background:linear-gradient(135deg,#1a1a2e 0%,#0f3460 100%);color:#fff;text-align:center;padding:80px 0}
-.cta-section h2{color:#fff}
-.cta-section p{color:rgba(255,255,255,0.75);max-width:500px;margin:0 auto 32px}
-.cta-btn{display:inline-flex;align-items:center;gap:10px;background:#ffd700;color:#1a1a2e;padding:16px 36px;border-radius:100px;font-size:1.1rem;font-weight:700;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s}
-.cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(255,215,0,0.3)}
-.cta-btn svg{width:20px;height:20px}
-.cta-note{color:rgba(255,255,255,0.5);font-size:0.85rem;margin-top:12px;line-height:1.5}
-
-footer{background:#0d0d1a;color:rgba(255,255,255,0.5);text-align:center;padding:32px 0;font-size:0.85rem}
-footer a{color:#ffd700;text-decoration:none}
-
-.faq-item{border-bottom:1px solid #eee;padding:20px 0}
+/* faq */
+.faq-item{border-bottom:1px solid #e8e4dd;padding:24px 0}
 .faq-item:last-child{border-bottom:none}
-.faq-q{font-weight:600;font-size:1rem;color:#1a1a2e;margin-bottom:6px;cursor:pointer}
-.faq-a{color:#555;font-size:0.93rem;line-height:1.6}
+.faq-q{font-weight:700;font-size:1.05rem;color:#1a1a2e;margin-bottom:8px;cursor:pointer}
+.faq-a{color:#555;font-size:1rem;line-height:1.7}
 
-@media(max-width:600px){
-  .hero{padding:60px 0 40px}
-  section{padding:48px 0}
-  .core-block,.philosophy,.content-block{padding:32px 24px}
-  .about-block,.story-block{padding:24px 20px}
-  .hero-spots{flex-direction:column;gap:6px;padding:12px 20px}
-  .format-grid{grid-template-columns:1fr}
-  .principle{padding:16px 20px}
-}
+/* CTA секція */
+.cta-section{background:linear-gradient(135deg,#1a1a2e 0%,#0f3460 100%);color:#fff;text-align:center;padding:100px 0}
+.cta-section h2{color:#fff;font-size:clamp(1.6rem,4vw,2.4rem)}
+.cta-section p{color:rgba(255,255,255,0.75);max-width:520px;margin:0 auto 36px;font-size:1.05rem;line-height:1.7}
+.cta-btn{display:inline-flex;align-items:center;gap:10px;background:#ffd700;color:#1a1a2e;padding:18px 40px;border-radius:60px;font-size:1.1rem;font-weight:700;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(255,215,0,0.25)}
+.cta-btn svg{width:20px;height:20px}
+.cta-note{color:rgba(255,255,255,0.5);font-size:0.9rem;margin-top:14px;line-height:1.5}
 
-.fade-in{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease}
+/* footer */
+footer{background:#0d0d1a;color:rgba(255,255,255,0.5);text-align:center;padding:40px 0;font-size:0.9rem}
+footer a{color:#ffd700;text-decoration:none}
+footer a:hover{text-decoration:underline}
+
+/* анімації */
+.fade-in{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease}
 .fade-in.visible{opacity:1;transform:translateY(0)}
+
+@media(max-width:640px){
+  body{font-size:16px}
+  .hero{padding:70px 0 60px}
+  .container{padding:0 20px}
+  section{padding:56px 0}
+  .core-block,.philosophy,.content-block,.about-block,.story-block{padding:28px 24px}
+  .about-wrap{grid-template-columns:1fr;justify-items:center;text-align:center}
+  .about-photo{width:100px;height:100px}
+  .hero-spots{margin-bottom:28px}
+  .principle{padding:20px}
+  .format-grid{grid-template-columns:1fr}
+  .result-item{padding:22px 24px}
+  .cta-section{padding:70px 0}
+}
 </style>
 </head>
 <body>
 
+<!-- HERO -->
 <header class="hero">
-  <div class="deco-circle deco-1"></div>
-  <div class="deco-circle deco-2"></div>
   <div class="container">
-    <div class="hero-badge">Безкоштовно • Без віку</div>
     <h1>Дія <span>до</span> мрії</h1>
     <div class="hero-tagline">«Ходімо. Зараз перевіримо.»</div>
     <div class="hero-sub">Не відкладай на завтра. Перевір ідею просто зараз — маленькою дією.</div>
@@ -129,8 +154,12 @@ footer a{color:#ffd700;text-decoration:none}
       <span>3</span>
       контакти — стільки я можу вести одночасно
     </div>
+    <a href="https://t.me/robosapiens8" class="hero-cta" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2.5L2.5 10.5L9.5 13.5"/><path d="M9.5 13.5L13.5 21.5L21.5 2.5"/><path d="M9.5 13.5L16.5 8.5"/></svg>
+      Написати в Telegram
+    </a>
   </div>
-</section>
+</header>
 
 <!-- CORE -->
 <section style="background:#fff">
@@ -138,12 +167,12 @@ footer a{color:#ffd700;text-decoration:none}
     <div class="core-block">
       <p>Більшість людей не відкладають ідею через брак знань.<br>
       Вони відкладають її, бо <span class="hl">не знають, який перший крок буде правильним.</span></p>
-      <p><span class="hl">Я допомагаю перестати лише думати</span> — знайти одну маленьку перевірку, яку можна зробити прямо зараз.</p>
+      <p style="margin-top:20px"><span class="hl">Я допомагаю перестати лише думати</span> — знайти одну маленьку перевірку, яку можна зробити прямо зараз.</p>
     </div>
   </div>
 </section>
 
-<!-- PASSIVITY + RESPONSIBILITY — скорочено -->
+<!-- PASSIVITY -->
 <section>
   <div class="container fade-in">
     <div class="section-label">Чому це важливо</div>
@@ -156,12 +185,12 @@ footer a{color:#ffd700;text-decoration:none}
         Чи будемо ми мати досвід отримання омріяного?<br>
         Чи можемо ми на це впливати?
       </div>
-      <p style="font-size:1.05rem;font-weight:600;color:#1a1a2e">Якщо так — то треба це перевірити :)</p>
+      <p style="font-size:1.15rem;font-weight:700;color:#1a1a2e">Якщо так — то треба це перевірити :)</p>
     </div>
   </div>
 </section>
 
-<!-- ФІЛОСОФІЯ — скорочено, прибрано повтори, замінено терміни -->
+<!-- PHILOSOPHY -->
 <section style="background:#fff">
   <div class="container fade-in">
     <div class="section-label">Моє переконання</div>
@@ -176,7 +205,7 @@ footer a{color:#ffd700;text-decoration:none}
   </div>
 </section>
 
-<!-- ЩО ТИ ОТРИМАЄШ -->
+<!-- WHAT YOU GET -->
 <section>
   <div class="container fade-in">
     <div class="section-label">Результат</div>
@@ -199,7 +228,7 @@ footer a{color:#ffd700;text-decoration:none}
   </div>
 </section>
 
-<!-- ІСТОРІЯ — одна, сильна -->
+<!-- STORY -->
 <section style="background:#fff">
   <div class="container fade-in">
     <div class="section-label">Як це виглядає</div>
@@ -209,49 +238,53 @@ footer a{color:#ffd700;text-decoration:none}
     <div class="story-block">
       <div class="story-label">Крок до бізнесу</div>
       <p>Ми з другом отримали замовлення: потрібен клоун-ходуліст. Він цим займався, я навіть не знав, як ті ходулі виглядають. Спроба орендувати — невдала. Я спитав: «А як вони влаштовані?» Він розповів. І я сказав: <strong>«Давай самі зробимо.»</strong></p>
-      <p style="margin-top:8px">У той момент його мислення змінилося. Він створив прибутковий бізнес, купив квартиру, машину. А почалося все з ходуль, зроблених за вечір.</p>
-      <p style="margin-top:8px">Найважливішим було не те, що ми зробили ходулі. А те, що ми перестали шукати готове рішення і запитали: <strong>«А чи можемо зробити самі?»</strong></p>
+      <p style="margin-top:10px">У той момент його мислення змінилося. Він створив прибутковий бізнес, купив квартиру, машину. А почалося все з ходуль, зроблених за вечір.</p>
+      <p style="margin-top:10px">Найважливішим було не те, що ми зробили ходулі. А те, що ми перестали шукати готове рішення і запитали: <strong>«А чи можемо зробити самі?»</strong></p>
     </div>
   </div>
 </section>
 
-<!-- ХТО Я — оновлена назва -->
+<!-- WHO I AM -->
 <section>
   <div class="container fade-in">
     <div class="section-label">Хто я</div>
     <h2>Тарас Москаленко — людина, яка любить перевіряти нові ідеї</h2>
     <p class="sub">Це не консультація. Це спільна перевірка твоєї ідеї. Я знаю достатньо, щоб допомогти почати. Якщо не знаю — чесно скажу, і ми розберемось разом.</p>
 
-    <div class="about-block">
-      <p>За останні роки я багато разів починав нові справи в різних сферах. Процес майже завжди однаковий: ідея → пошук → маленький експеримент → помилки → результат.</p>
-      <p>Саме це я і пропоную. Не готові відповіді, а <strong>допомогу в тому, щоб зробити першу дію до мрії.</strong></p>
-    </div>
-
-    <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:16px">
-      <a href="https://fil-m.github.io/portfolio-page/" target="_blank" rel="noopener" style="background:#fff;border:1px solid #e0e0e0;border-radius:100px;padding:8px 18px;font-size:0.85rem;color:#444;text-decoration:none;font-weight:500;transition:all 0.2s">📸 Фото та проєкти</a>
-      <a href="https://github.com/Fil-m" target="_blank" rel="noopener" style="background:#fff;border:1px solid #e0e0e0;border-radius:100px;padding:8px 18px;font-size:0.85rem;color:#444;text-decoration:none;font-weight:500;transition:all 0.2s">🐙 GitHub</a>
-      <a href="https://www.instagram.com/moskalenko_taras/" target="_blank" rel="noopener" style="background:#fff;border:1px solid #e0e0e0;border-radius:100px;padding:8px 18px;font-size:0.85rem;color:#444;text-decoration:none;font-weight:500;transition:all 0.2s">📸 Instagram</a>
+    <div class="about-wrap">
+      <img src="https://fil-m.github.io/portfolio-page/assets/photo.jpg" alt="Тарас Москаленко" class="about-photo" onerror="this.style.display='none'">
+      <div>
+        <div class="about-block">
+          <p>За останні роки я багато разів починав нові справи в різних сферах. Процес майже завжди однаковий: ідея → пошук → маленький експеримент → помилки → результат.</p>
+          <p>Саме це я і пропоную. Не готові відповіді, а <strong>допомогу в тому, щоб зробити першу дію до мрії.</strong></p>
+        </div>
+        <div class="social-links">
+          <a href="https://fil-m.github.io/portfolio-page/" class="social-link" target="_blank" rel="noopener">📸 Фото та проєкти</a>
+          <a href="https://github.com/Fil-m" class="social-link" target="_blank" rel="noopener">🐙 GitHub</a>
+          <a href="https://www.instagram.com/moskalenko_taras/" class="social-link" target="_blank" rel="noopener">📸 Instagram</a>
+        </div>
+      </div>
     </div>
 
     <div class="strong-quote">
       Я не боюся сказати «не знаю». Але майже завжди знаю, як знайти відповідь або перевірити її на практиці.
     </div>
 
-    <div class="section-label" style="margin-top:40px">З чим я працював</div>
-    <h2 style="font-size:1.2rem;font-weight:600">Проєкти, які я реально починав і доводив до результату</h2>
+    <div class="section-label" style="margin-top:48px">Досвід</div>
+    <h2 style="font-size:1.3rem">Проєкти, які я реально починав і доводив до результату</h2>
 
     <div class="domains">
       <span class="domain-tag">⚙️ Виробництво</span>
       <span class="domain-tag">🎬 Медіа та відео</span>
-      <span class="domain-tag">💻 Сайти, програмування, автоматизація</span>
-      <span class="domain-tag">🤖 Робототехніка та електроніка</span>
+      <span class="domain-tag">💻 Сайти, програмування</span>
+      <span class="domain-tag">🤖 Робототехніка</span>
       <span class="domain-tag">🏗️ Будівництво</span>
       <span class="domain-tag">🔧 Техніка та механіка</span>
     </div>
   </div>
 </section>
 
-<!-- ПРИНЦИПИ -->
+<!-- PRINCIPLES -->
 <section style="background:#fff">
   <div class="container fade-in">
     <div class="section-label">Як я працюю</div>
@@ -273,13 +306,13 @@ footer a{color:#ffd700;text-decoration:none}
       </div>
       <div class="principle">
         <div class="principle-num">4</div>
-        <p><strong>Мені подобається бачити,</strong> як люди починають робити те, про що давно думали. Це те, заради чого я це роблю.</p>
+        <p><strong>Мені подобається бачити,</strong> як люди починають робити те, про що давно думали.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ДЛЯ КОГО -->
+<!-- FOR WHOM -->
 <section>
   <div class="container fade-in">
     <div class="section-label">Для кого</div>
@@ -306,25 +339,25 @@ footer a{color:#ffd700;text-decoration:none}
   </div>
 </section>
 
-<!-- ФОРМАТ -->
+<!-- FORMAT -->
 <section style="background:#fff">
   <div class="container fade-in">
     <div class="section-label">Формат</div>
     <h2>Як це працює</h2>
 
     <div class="format-grid">
-      <div><span class="label">Вартість</span></div>
+      <div><span class="label">💰 Вартість</span></div>
       <div><span class="value">Безкоштовно</span></div>
-      <div><span class="label">Вік</span></div>
+      <div><span class="label">👤 Вік</span></div>
       <div><span class="value">Без обмежень. 8 чи 80.</span></div>
-      <div><span class="label">Тема</span></div>
+      <div><span class="label">📋 Тема</span></div>
       <div><span class="value">Майже будь-яка, яку можна перевірити невеликими кроками.</span></div>
-      <div><span class="label">Формат</span></div>
+      <div><span class="label">💬 Формат</span></div>
       <div><span class="value">Онлайн (Telegram, дзвінок) або офлайн</span></div>
-      <div><span class="label">Старт</span></div>
+      <div><span class="label">🚀 Старт</span></div>
       <div><span class="value">1–2 зустрічі + підтримка</span></div>
-      <div><span class="label">Контактів</span></div>
-      <div><span class="value">Всього 3 одночасно. Люди завершують експерименти — контакти змінюються.</span></div>
+      <div><span class="label">📎 Контактів</span></div>
+      <div><span class="value">Всього 3 одночасно. Контакти змінюються.</span></div>
     </div>
   </div>
 </section>
@@ -365,9 +398,9 @@ footer a{color:#ffd700;text-decoration:none}
 <!-- CTA -->
 <section class="cta-section">
   <div class="container fade-in">
-    <div class="section-label" style="color:rgba(255,255,255,0.4)">Почни зараз</div>
+    <div class="section-label" style="color:rgba(255,255,255,0.4);letter-spacing:3px">Почни зараз</div>
     <h2>Є ідея?<br>«Ходімо. Зараз перевіримо.»</h2>
-    <p>Напиши мені 2 речення: в чому ідея і що заважає почати. Я беру лише трьох одночасно — стільки можу вести уважно. Люди завершують експерименти, контакти змінюються, тож місця з'являтимуться. Далі — не плануємо, а пробуємо.</p>
+    <p>Напиши мені 2 речення: в чому ідея і що заважає почати. Я беру лише трьох одночасно — стільки можу вести уважно. Контакти змінюються, тож місця з'являтимуться. Далі — не плануємо, а пробуємо.</p>
 
     <a href="https://t.me/robosapiens8" class="cta-btn" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2.5L2.5 10.5L9.5 13.5"/><path d="M9.5 13.5L13.5 21.5L21.5 2.5"/><path d="M9.5 13.5L16.5 8.5"/></svg>
@@ -379,8 +412,8 @@ footer a{color:#ffd700;text-decoration:none}
 
 <footer>
   <div class="container">
-    <p>© 2026 Дія до мрії. Безкоштовна ініціатива Тараса Москаленка.</p>
-    <p style="margin-top:8px"><a href="https://t.me/robosapiens8" target="_blank" rel="noopener">@robosapiens8 у Telegram</a> · <a href="https://fil-m.github.io/portfolio-page/" target="_blank" rel="noopener">Портфоліо</a></p>
+    <p>© 2026 Дія до мрії · Безкоштовна ініціатива Тараса Москаленка</p>
+    <p style="margin-top:10px"><a href="https://t.me/robosapiens8" target="_blank" rel="noopener">@robosapiens8 у Telegram</a> · <a href="https://fil-m.github.io/portfolio-page/" target="_blank" rel="noopener">Портфоліо</a></p>
   </div>
 </footer>
 
