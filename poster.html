@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дія до мрії — Афіша А4</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            color: #000000;
+            background: #ffffff;
+            line-height: 1.4;
+            padding: 0;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        
+        @page {
+            size: A4;
+            margin: 12mm 15mm;
+        }
+        
+        .poster-container {
+            width: 100%;
+            max-width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Header styling */
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #000;
+            padding-bottom: 8px;
+            margin-bottom: 16px;
+        }
+        .header-badge {
+            display: inline-block;
+            border: 2px solid #000;
+            padding: 4px 12px;
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+        .header h1 {
+            font-size: 40px;
+            font-weight: 900;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+            line-height: 1.1;
+            margin-bottom: 4px;
+        }
+        .header h1 span {
+            background: #000;
+            color: #fff;
+            padding: 0 8px;
+            display: inline-block;
+        }
+        .header .tagline {
+            font-size: 17px;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        /* Main content */
+        .main-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .section-box {
+            border: 2px solid #000;
+            padding: 12px 16px;
+            background: #ffffff;
+        }
+        
+        .section-title {
+            font-size: 18px;
+            font-weight: 800;
+            text-transform: uppercase;
+            border-bottom: 2px solid #000;
+            padding-bottom: 2px;
+            margin-bottom: 8px;
+            display: inline-block;
+        }
+
+        .core-text {
+            font-size: 13.5px;
+            line-height: 1.45;
+            margin-bottom: 8px;
+        }
+        .core-text strong {
+            font-weight: 700;
+        }
+
+        /* Grid layouts */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px 20px;
+        }
+        .info-item {
+            font-size: 13px;
+            line-height: 1.35;
+        }
+        .info-item strong {
+            display: block;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        /* Bullet points */
+        .list-items {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 20px;
+        }
+        .list-items li {
+            position: relative;
+            padding-left: 18px;
+            font-size: 13px;
+            line-height: 1.3;
+        }
+        .list-items li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: 800;
+            font-size: 14px;
+        }
+        .list-items li strong {
+            font-weight: 700;
+        }
+
+        /* Parent Safety Box */
+        .safety-box {
+            border: 2px dashed #000;
+            background: #fdfdfd;
+            padding: 12px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        .safety-icon {
+            font-size: 20px;
+            line-height: 1;
+        }
+        .safety-text h3 {
+            font-size: 15px;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+        .safety-text p {
+            font-size: 12.5px;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        /* QR section */
+        .qr-section {
+            border-top: 2px solid #000;
+            padding-top: 12px;
+            margin-top: 10px;
+        }
+        .qr-title {
+            text-align: center;
+            font-size: 14px;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .qr-grid {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+        }
+        .qr-card {
+            text-align: center;
+            max-width: 150px;
+        }
+        .qr-image-wrapper {
+            border: 2px solid #000;
+            padding: 4px;
+            background: #fff;
+            display: inline-block;
+            margin-bottom: 4px;
+        }
+        .qr-card img {
+            width: 100px;
+            height: 100px;
+            display: block;
+        }
+        .qr-card h4 {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+        .qr-card p {
+            font-size: 10.5px;
+            color: #444;
+            line-height: 1.2;
+        }
+
+        .footer-note {
+            text-align: center;
+            font-size: 11px;
+            font-weight: 600;
+            margin-top: 12px;
+            border-top: 1px solid #ddd;
+            padding-top: 6px;
+        }
+        .impressum {
+            font-size: 9px;
+            font-weight: normal;
+            color: #666;
+            display: block;
+            margin-top: 4px;
+        }
+
+        /* Print controls banner */
+        .no-print-banner {
+            background: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 12px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .no-print-banner button {
+            background: #000;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .no-print-banner button:hover {
+            background: #333;
+        }
+
+        @media print {
+            .no-print-banner {
+                display: none !important;
+            }
+            body {
+                padding: 0;
+            }
+            .poster-container {
+                min-height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="no-print-banner">
+        <strong>Афіша Дія до мрії підготовлена до друку на форматі A4 (чорно-біла).</strong><br>
+        Відкрийте цю сторінку в браузері, натисніть кнопку нижче або комбінацію клавіш <strong>Ctrl + P</strong> і виберіть принтер або збереження в PDF.<br>
+        <button onclick="window.print()">Друк / Зберегти як PDF</button>
+    </div>
+
+    <div class="poster-container">
+        <div class="header">
+            <div class="header-badge">Безкоштовно · Для будь-якого віку</div>
+            <h1>Дія <span>до</span> мрії</h1>
+            <p class="tagline">Напарник для старту. «Ходімо. Зараз перевіримо.»</p>
+        </div>
+
+        <div class="main-content">
+            <div class="section-box">
+                <div class="section-title">У чому суть проекту?</div>
+                <p class="core-text">Більшість людей не відкладають ідеї через брак знань — вони відкладають їх, бо <strong>не знають, який перший крок буде правильним</strong>. Я допомагаю зробити цей перший крок на практиці за допомогою маленьких експериментів.</p>
+                
+                <div class="info-grid">
+                    <div class="info-item">
+                        <strong>🧒 Дитина з ідеєю</strong>
+                        Хоче створити власну гру, робота чи мультфільм. Допоможу зробити першу перевірку на практиці.
+                    </div>
+                    <div class="info-item">
+                        <strong>🧑‍💻 Дорослий з мрією</strong>
+                        Давно хочете запустити свій сайт чи проект, але відкладаєте? Розберемося разом без зайвої теорії.
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-box">
+                <div class="section-title">З якими проектами я працюю?</div>
+                <div class="info-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="info-item">
+                        <strong>💻 Сайти та автоматизація</strong>
+                        Створення сайтів, написання коду, автоматизація завдань.
+                    </div>
+                    <div class="info-item">
+                        <strong>🤖 Робототехніка й пристрої</strong>
+                        Робота з електронікою, моделювання та збірка простих систем.
+                    </div>
+                    <div class="info-item">
+                        <strong>🎬 Медіа та відеовиробництво</strong>
+                        Зйомка відео, монтаж, основи анімації та стопмоушен.
+                    </div>
+                    <div class="info-item">
+                        <strong>🏗️ Конструювання та техніка</strong>
+                        Будь-які пристрої чи проекти, які можна зібрати власноруч.
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-box">
+                <div class="section-title">Що ти отримаєш після зустрічі?</div>
+                <ul class="list-items">
+                    <li>
+                        <strong>Зрозумілий наступний крок.</strong> Знатимеш, що конкретно робити завтра.
+                    </li>
+                    <li>
+                        <strong>Розуміння, як перевірити ідею</strong> без великих витрат часу чи грошей.
+                    </li>
+                    <li>
+                        <strong>Список потрібних інструментів</strong> та перевірених сервісів саме для твоєї ідеї.
+                    </li>
+                    <li>
+                        <strong>Підтримка напарника.</strong> Людина, якій можна написати, якщо застрягнеш.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="safety-box">
+                <div class="safety-icon">🔒</div>
+                <div class="safety-text">
+                    <h3>Безпека неповнолітніх та супровід батьків</h3>
+                    <p>Для дітей та підлітків (до 18 років) присутність або письмова згода батьків/опікунів на першій зустрічі є обов'язковою. Уся комунікація є абсолютно прозорою та відкритою для батьків.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="qr-section">
+            <div class="qr-title">Всього 3 вільні місця для старту. Напиши та забронювати місце:</div>
+            <div class="qr-grid">
+                <div class="qr-card">
+                    <div class="qr-image-wrapper">
+                        <img src="assets/qr_website.png" alt="QR Website">
+                    </div>
+                    <h4>Сайт проекту</h4>
+                    <p>Історії старту, детальний FAQ та філософія дій</p>
+                </div>
+                
+                <div class="qr-card">
+                    <div class="qr-image-wrapper">
+                        <img src="assets/qr_organizer.png" alt="QR Contact">
+                    </div>
+                    <h4>Зв'язатися</h4>
+                    <p>Напиши організатору в Telegram: @robosapiens8</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            Дія до мрії · Безкоштовна некомерційна ініціатива · Karlsruhe
+            <span class="impressum">Impressum: Viktor Serdyuk, c/o Ukrainer in Karlsruhe e.V., Gellertstraße 14, 76185 Karlsruhe | welcomeinkarlsruhe@gmail.com</span>
+        </div>
+    </div>
+
+</body>
+</html>

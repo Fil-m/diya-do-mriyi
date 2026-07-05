@@ -38,12 +38,19 @@ h2 + .sub{color:#555;font-size:1.05rem;margin-bottom:32px;max-width:600px}
 .core-block p{font-size:clamp(1rem,2.5vw,1.2rem);line-height:1.7;color:rgba(255,255,255,0.9)}
 .core-block .hl{color:#ffd700;font-style:normal;font-weight:600}
 
-/* philosophy block — новий */
-.philosophy{background:#f8f5ee;border:1px solid #e8dfd0;border-radius:20px;padding:40px 36px}
-.philosophy h3{font-size:1.15rem;font-weight:700;color:#1a1a2e;margin-bottom:20px}
-.philosophy p{color:#444;font-size:0.97rem;line-height:1.7;margin-bottom:14px}
+/* passive->active block — НОВИЙ */
+.passive-block{background:#f8f5ee;border:1px solid #e8dfd0;border-radius:20px;padding:40px 36px;margin-top:8px}
+.passive-block p{color:#444;font-size:0.97rem;line-height:1.7;margin-bottom:14px}
+.passive-block p:last-child{margin-bottom:0}
+.passive-block strong{color:#1a1a2e}
+.passive-block .question{font-size:1.05rem;font-weight:600;color:#1a1a2e;margin:18px 0 10px;line-height:1.6}
+
+/* philosophy block */
+.philosophy{background:#1a1a2e;color:#fff;border-radius:20px;padding:44px 40px;margin:0}
+.philosophy p{font-size:clamp(0.95rem,2vw,1.05rem);line-height:1.8;color:rgba(255,255,255,0.88);margin-bottom:12px}
+.philosophy .hl-phil{color:#ffd700;font-weight:600}
+.philosophy .strong-phil{font-weight:600;color:#fff}
 .philosophy p:last-child{margin-bottom:0}
-.philosophy .em{color:#1a1a2e;font-weight:600}
 
 /* what you get */
 .result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin-top:8px}
@@ -59,7 +66,6 @@ h2 + .sub{color:#555;font-size:1.05rem;margin-bottom:32px;max-width:600px}
 
 /* strong quote */
 .strong-quote{background:linear-gradient(135deg,#fef9ee,#fff8e7);border-left:4px solid #ffd700;border-radius:12px;padding:28px 32px;margin:24px 0 0;font-size:1.05rem;line-height:1.7;color:#333;font-weight:500}
-.strong-quote em{font-style:italic;color:#555;font-weight:400}
 
 /* domains */
 .domains{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
@@ -116,7 +122,7 @@ footer a{color:#ffd700;text-decoration:none}
 @media(max-width:600px){
   .hero{padding:60px 0 40px}
   section{padding:48px 0}
-  .core-block,.philosophy{padding:32px 24px}
+  .core-block,.philosophy,.passive-block{padding:32px 24px}
   .about-block,.story-block{padding:24px 20px}
   .hero-spots{flex-direction:column;gap:6px;padding:12px 20px}
   .format-grid{grid-template-columns:1fr}
@@ -159,18 +165,28 @@ footer a{color:#ffd700;text-decoration:none}
   </div>
 </section>
 
-<!-- PROBLEM -->
+<!-- ПАСИВНІСТЬ + ВІДПОВІДАЛЬНІСТЬ — твій текст -->
 <section>
   <div class="container fade-in">
     <div class="section-label">Чому це важливо</div>
-    <h2>Найважче — не зробити, а почати</h2>
-    <p class="sub">Буває: є мрія, є ідея. Але не знаєш, з чого почати. Або боїшся, що перша спроба буде невдалою. Або відкладаєш на потім — і з часом перестаєш про це думати.</p>
-    <p>Я це знаю. Я сам через це проходив — багато разів, у різних сферах.</p>
-    <p style="margin-top:12px">Майже кожного разу виявлялося, що реальність зовсім не така, як я уявляв. Одні ідеї, які здавалися чудовими, не працювали. Інші, від яких я нічого не очікував, навпаки — давали результат. Саме тому я перестав намагатися все прорахувати наперед і почав більше перевіряти на практиці.</p>
+    <h2>Найважче — перейти з пасивного стану, коли думаєш про мрію</h2>
+
+    <div class="passive-block">
+      <p>Насправді, якщо людина навіть у дитинстві щось омріяла — <strong>то з того самого місця і моменту часу вона може почати рух</strong>, щоб отримати бажане. З віком ми лише набуваємо навичок — а отже, можемо ще більше.</p>
+
+      <p>Розуміння цього важливо. Бо це наша <strong>відповідальність перед собою</strong> за життя, яке ми проживемо.</p>
+
+      <div class="question">
+        Чи будемо ми мати досвід отримання омріяного?<br>
+        Чи можемо ми на це впливати?
+      </div>
+
+      <p style="font-size:1.05rem;font-weight:600;color:#1a1a2e">Якщо так — то треба це перевірити :)</p>
+    </div>
   </div>
 </section>
 
-<!-- PHILOSOPHY / ЩО Я ВІРЮ -->
+<!-- ФІЛОСОФІЯ — твій текст повністю -->
 <section style="background:#fff">
   <div class="container fade-in">
     <div class="section-label">Моє переконання</div>
@@ -179,15 +195,15 @@ footer a{color:#ffd700;text-decoration:none}
     <div class="philosophy">
       <p>Я не вірю, що життя можна ідеально спланувати.</p>
       <p>Не вірю, що існує правильний момент для старту.</p>
-      <p>І майже ніколи не вірю в припущення, поки вони не перевірені.</p>
-      <p style="margin-top:20px" class="em">Я вірю в маленькі експерименти.</p>
-      <p class="em">У те, що одна дія часто дає більше розуміння, ніж десятки годин роздумів.</p>
+      <p>І <span class="hl-phil">що будь-які уявлення людей можуть бути помилковими</span> — і тільки практичні контрольовані експерименти показують вірність наших уявлень.</p>
+      <p style="margin-top:20px"><span class="hl-phil">Я вірю в маленькі експерименти.</span></p>
+      <p>Дії, що перевіряють, чи вірно ми уявляємо, як працює світ. <span class="strong-phil">Якщо крок вірний</span> — можна сміливо перевіряти наступний. <span class="strong-phil">Якщо ні</span> — це стимул для роздумів: а який зараз світ, що я його не так уявляв? — і до наступної перевірки вже з новими знаннями.</p>
       <p style="margin-top:20px">Саме так я працюю зі своїми ідеями. І саме так допомагаю іншим.</p>
     </div>
   </div>
 </section>
 
-<!-- WHAT YOU GET -->
+<!-- ЩО ТИ ОТРИМАЄШ -->
 <section>
   <div class="container fade-in">
     <div class="section-label">Результат</div>
@@ -197,34 +213,30 @@ footer a{color:#ffd700;text-decoration:none}
     <div class="result-grid">
       <div class="result-item">
         <div class="result-check">✓</div>
-        <p><strong>Зрозумілий наступний крок.</strong> Ти знатимеш, що робити завтра — без паніки і без зайвої теорії.</p>
+        <p><strong>Одну реальну дію,</strong> яку можна зробити вже завтра, щоб перевірити свою ідею. Не план — а саме дія.</p>
       </div>
       <div class="result-item">
         <div class="result-check">✓</div>
-        <p><strong>Список ресурсів та інструментів.</strong> Рівно те, що реально потрібно саме зараз. Нічого зайвого.</p>
+        <p><strong>Розуміння, як перевірити ідею</strong> без великих витрат часу чи грошей — маленьким експериментом.</p>
       </div>
       <div class="result-item">
         <div class="result-check">✓</div>
-        <p><strong>Розуміння, як перевірити ідею</strong> без великих витрат часу чи грошей.</p>
-      </div>
-      <div class="result-item">
-        <div class="result-check">✓</div>
-        <p><strong>Людина, якій можна написати,</strong> якщо застрягнеш. Без формальностей. Просто поруч.</p>
+        <p><strong>Людина, якій можна написати,</strong> коли застрягнеш. Без формальностей. Просто поруч.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHO I AM -->
+<!-- ХТО Я — з твоєю правкою -->
 <section style="background:#fff">
   <div class="container fade-in">
     <div class="section-label">Хто я</div>
     <h2>Людина, яка любить починати нові проєкти</h2>
-    <p class="sub">Я не претендую на роль універсального експерта. Я знаю достатньо, щоб допомогти тобі зробити першу перевірку.</p>
+    <p class="sub">Я не претендую на роль універсального експерта. Я знаю достатньо, щоб допомогти зробити першу перевірку.</p>
 
     <div class="about-block">
       <p>За останні роки я багато разів починав нові справи в різних сферах. Майже щоразу процес був однаковим: виникала ідея — далі пошук інформації, перші невеликі експерименти, помилки й поступовий результат.</p>
-      <p>Саме це я і пропоную. Не готові відповіді на всі питання, а допомогу в тому, щоб зробити перші дії без зайвого хаосу.</p>
+      <p>Саме це я і пропоную. Не готові відповіді на всі питання, а <strong>допомогу в тому, щоб зробити першу дію до мрії.</strong></p>
       <p>Якщо питання виходить за межі мого досвіду — я чесно скажу про це. Якщо його можна дослідити й перевірити на практиці — допоможу знайти шлях.</p>
     </div>
 
@@ -246,7 +258,7 @@ footer a{color:#ffd700;text-decoration:none}
   </div>
 </section>
 
-<!-- STORIES -->
+<!-- ІСТОРІЇ -->
 <section>
   <div class="container fade-in">
     <div class="section-label">Як це виглядає на практиці</div>
@@ -271,7 +283,7 @@ footer a{color:#ffd700;text-decoration:none}
   </div>
 </section>
 
-<!-- PRINCIPLES -->
+<!-- ПРИНЦИПИ -->
 <section style="background:#fff">
   <div class="container fade-in">
     <div class="section-label">Як я працюю</div>
@@ -289,8 +301,8 @@ footer a{color:#ffd700;text-decoration:none}
       <div class="principle">
         <div class="principle-num">2</div>
         <div>
-          <h3>Перевірка ідеї на реальність</h3>
-          <p>Після першої спроби ти або зрозумієш, що це справді твоє, або звільниш енергію для іншого. Обидва результати — цінні.</p>
+          <h3>Перевірка уявлень на реальність</h3>
+          <p>Після першої дії ти або зрозумієш, що це справді твоє, або дізнаєшся щось нове про світ і про себе. Обидва результати — цінні.</p>
         </div>
       </div>
       <div class="principle">
@@ -311,7 +323,7 @@ footer a{color:#ffd700;text-decoration:none}
   </div>
 </section>
 
-<!-- FOR WHOM -->
+<!-- ДЛЯ КОГО -->
 <section>
   <div class="container fade-in">
     <div class="section-label">Для кого</div>
@@ -327,7 +339,7 @@ footer a{color:#ffd700;text-decoration:none}
       <div class="for-card">
         <div class="icon">🧑‍💻</div>
         <h3>Дорослий із мрією</h3>
-        <p>Давно хочеш запустити свій проєкт, але відкладаєш? Розберемось разом — без тиску і без зайвої теорії.</p>
+        <p>Давно хочеш запустити свій проєкт, але відкладаєш? Розберемось разом — без тиску і без зайвої теорії, з однієї маленької дії.</p>
       </div>
       <div class="for-card">
         <div class="icon">👪</div>
@@ -338,7 +350,7 @@ footer a{color:#ffd700;text-decoration:none}
   </div>
 </section>
 
-<!-- FORMAT -->
+<!-- ФОРМАТ -->
 <section style="background:#fff">
   <div class="container fade-in">
     <div class="section-label">Формат</div>
